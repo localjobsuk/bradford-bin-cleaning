@@ -7,8 +7,10 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>Bradford Bin Cleaning</h1>
+
     <nav>
       <a href="index.html">Home</a> |
       <a href="book.html">Book Bin Cleaning</a> |
@@ -16,10 +18,24 @@
     </nav>
   </header>
 
-  <h2>Book Your Bin Cleaning</h2>
-  <p>Please fill in the form below. You will be taken to secure payment after.</p>
+  <hr>
 
+  <!-- INTRO -->
+  <section>
+    <h2>Book Your Bin Cleaning</h2>
+    <p>
+      Choose your bins and plan below.  
+      After completing this form, you will be taken straight to secure payment.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- BOOKING FORM -->
   <form>
+
+    <h3>Your Details</h3>
+
     <label>Full Name:</label><br>
     <input type="text" required><br><br>
 
@@ -35,24 +51,75 @@
     <label>Full Address:</label><br>
     <textarea required></textarea><br><br>
 
-    <label>Number of bins:</label><br>
+    <hr>
+
+    <h3>Bin Selection</h3>
+
+    <label>How many bins need cleaning?</label><br>
     <select required>
+      <option value="">Select</option>
       <option>1 Bin</option>
       <option>2 Bins</option>
       <option>3 Bins</option>
     </select><br><br>
 
-    <label>Choose your plan:</label><br>
+    <hr>
+
+    <h3>Choose Your Plan</h3>
+
+    <label>Payment option:</label><br>
     <select required>
-      <option>One-off clean (£9)</option>
-      <option>Monthly plan (Auto-renew)</option>
-      <option>6 Month Plan</option>
-      <option>12 Month Plan</option>
+      <option value="">Select a plan</option>
+      <option>Monthly plan (Auto-renews every month)</option>
+      <option>6 Month plan – £30</option>
+      <option>12 Month plan – £60</option>
     </select><br><br>
 
-    <button type="submit">Next – Go to Secure Payment</button>
+    <p>
+      ✔ Monthly plans renew automatically every month  
+      <br>
+      ✔ 6 and 12 month plans are one-off payments
+    </p>
+
+    <hr>
+
+    <h3>First Clean Date</h3>
+
+    <label>When would you like your first clean?</label><br>
+    <select required>
+      <option value="">Select</option>
+      <option>Immediately (next available slot)</option>
+      <option>After next bin collection</option>
+    </select><br><br>
+
+    <hr>
+
+    <h3>Auto-Renew Confirmation</h3>
+
+    <label>Do you agree to auto-renew for monthly plans?</label><br>
+    <select required>
+      <option value="">Yes / No</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select><br><br>
+
+    <p>
+      (Auto-renew applies to monthly plans only.  
+      You can cancel anytime.)
+    </p>
+
+    <hr>
+
+    <!-- PAYMENT BUTTON -->
+    <button type="submit">
+      Next → Go to Secure Payment
+    </button>
+
   </form>
 
+  <hr>
+
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Bradford Bin Cleaning</p>
   </footer>
