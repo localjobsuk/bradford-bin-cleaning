@@ -9,48 +9,59 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #333;
       background: #f4f4f4;
+      color: #333;
     }
 
     /* TOP BAR */
     .top-bar {
       background: #0a7c3a;
-      color: #fff;
-      padding: 8px 20px;
+      color: white;
+      padding: 8px 15px;
       text-align: center;
       font-size: 14px;
     }
 
+    .top-bar a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
     /* HEADER */
     header {
-      background: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: white;
       border-bottom: 1px solid #eee;
-      flex-wrap: wrap;
     }
 
-    .logo {
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .branding {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 20px;
+      margin-bottom: 15px;
     }
 
-    .logo img {
-      height: 70px;
+    .branding img {
+      height: 80px;
     }
 
-    .logo h1 {
+    .branding h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 34px;
       color: #0a7c3a;
     }
 
     nav a {
-      margin-left: 25px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
       color: #333;
@@ -64,76 +75,59 @@
     .hero {
       background: linear-gradient(to right, #0a7c3a, #13a455);
       color: white;
-      padding: 50px 20px;
       text-align: center;
+      padding: 50px 20px;
     }
 
     .hero h2 {
       margin: 0;
-      font-size: 36px;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      font-size: 18px;
+      font-size: 32px;
     }
 
     /* CONTENT */
     .content {
-      max-width: 1000px;
+      max-width: 800px;
       margin: 40px auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .card {
-      background: #fff;
+      background: white;
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
-    .card h3 {
-      margin-top: 0;
+    .contact-box {
+      margin-top: 25px;
+      font-size: 18px;
+    }
+
+    .contact-box p {
+      margin: 15px 0;
+    }
+
+    .contact-box a {
       color: #0a7c3a;
-    }
-
-    .contact-item {
-      margin-bottom: 15px;
-      font-size: 16px;
-    }
-
-    .contact-item a {
-      color: #0a7c3a;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+      font-size: 20px;
     }
 
-    .contact-item a:hover {
+    .contact-box a:hover {
       text-decoration: underline;
     }
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
+    /* MAP */
+    .map {
+      margin-top: 30px;
       border-radius: 8px;
+      overflow: hidden;
     }
 
     footer {
       background: #222;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 15px;
       margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -142,62 +136,59 @@
 
   <!-- TOP BAR -->
   <div class="top-bar">
-    Have a question or prefer to book by phone or WhatsApp?
+    📞 <a href="tel:07840507481">07840 507481</a> |
+    📧 <a href="mailto:bradfordbincleaning@gmail.com">bradfordbincleaning@gmail.com</a>
   </div>
 
   <!-- HEADER -->
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Bradford Bin Cleaning Logo">
-      <h1>Bradford Bin Cleaning</h1>
-    </div>
+    <div class="header-inner">
+      <div class="branding">
+        <img src="logo.png" alt="Bradford Bin Cleaning Logo">
+        <h1>Bradford Bin Cleaning</h1>
+      </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="book.html">Book Bin Cleaning</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="book.html">Book Bin Cleaning</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO -->
-  <div class="hero">
+  <section class="hero">
     <h2>Get in Touch Today</h2>
-    <p>We’re here to help with all your bin cleaning needs</p>
-  </div>
+  </section>
 
   <!-- CONTENT -->
   <div class="content">
+    <p>
+      Have a question or prefer to book by phone or WhatsApp?  
+      We’re happy to help.
+    </p>
 
-    <!-- CONTACT DETAILS -->
-    <div class="card">
-      <h3>Contact Information</h3>
+    <div class="contact-box">
+      <p>📞 Call or WhatsApp</p>
+      <p><a href="tel:07840507481">07840 507481</a></p>
 
-      <div class="contact-item">
-        📞 Call or WhatsApp:<br>
-        <a href="tel:07840507481">07840 507481</a>
-      </div>
+      <p>📧 Email</p>
+      <p><a href="mailto:bradfordbincleaning@gmail.com">bradfordbincleaning@gmail.com</a></p>
 
-      <div class="contact-item">
-        📧 Email:<br>
-        <a href="mailto:bradfordbincleaning@gmail.com">
-          bradfordbincleaning@gmail.com
-        </a>
-      </div>
-
-      <div class="contact-item">
-        📍 Serving Bradford & surrounding areas
-      </div>
+      <p>📍 Serving Bradford & surrounding areas</p>
     </div>
 
     <!-- MAP -->
-    <div class="card">
-      <h3>Our Service Area</h3>
+    <div class="map">
       <iframe 
-        src="https://www.google.com/maps?q=Bradford,UK&output=embed"
+        src="https://www.google.com/maps?q=Bradford%20UK&output=embed"
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen 
         loading="lazy">
       </iframe>
     </div>
-
   </div>
 
   <!-- FOOTER -->
