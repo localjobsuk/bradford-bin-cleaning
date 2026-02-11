@@ -1,58 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Book Bin Cleaning</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4}
-header{background:#0a7c3a;color:#fff;text-align:center;padding:20px}
-.form-box{
-  max-width:600px;
-  background:#fff;
-  margin:40px auto;
-  padding:30px;
-  border-radius:8px;
-}
-input,select,button{
-  width:100%;
-  padding:12px;
-  margin-top:10px;
-}
-button{
-  background:#0a7c3a;
-  color:#fff;
-  border:none;
-  font-size:16px;
-  cursor:pointer;
-}
-button:hover{background:#095f2e}
-</style>
+  <meta charset="UTF-8">
+  <title>Book Bin Cleaning</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<h1>Book Your Bin Cleaning</h1>
+<header class="site-header">
+  <div class="top-bar">
+    📞 <a href="tel:07840507481">07840 507481</a>
+    📧 <a href="mailto:bradfordbincleaning@gmail.com">bradfordbincleaning@gmail.com</a>
+  </div>
+
+  <div class="nav-wrapper">
+    <img src="images/logo.png" class="logo" alt="Bradford Bin Cleaning Logo">
+    <h1 class="site-title">Bradford Bin Cleaning</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="book.html">Book Bin Cleaning</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
 </header>
 
-<div class="form-box">
-<form>
-<input type="text" placeholder="Full Name" required>
-<input type="text" placeholder="Address" required>
-<input type="tel" placeholder="Phone Number" required>
+<section class="content">
+  <h2>Book Your Bin Cleaning</h2>
 
-<select required>
-<option value="">Select Number of Bins</option>
-<option>1 Bin</option>
-<option>2 Bins</option>
-<option>3 Bins</option>
-</select>
+  <form class="form">
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
 
-<button type="submit">Proceed to Payment</button>
-</form>
-</div>
+<footer>
+  © 2026 Bradford Bin Cleaning
+</footer>
 
 </body>
 </html>
