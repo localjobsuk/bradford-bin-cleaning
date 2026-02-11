@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bradford Bin Cleaning</title>
+  <title>Book Your Bin Cleaning</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="nav-wrapper">
-    <img src="images/logo.png" class="logo" alt="Bradford Bin Cleaning Logo">
+    <img src="logo.png" class="logo" alt="Bradford Bin Cleaning Logo">
     <h1 class="site-title">Bradford Bin Cleaning</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -25,48 +25,67 @@
 </header>
 
 <section class="content">
-  <h2>Professional Wheelie Bin Cleaning & Sanitising</h2>
+  <h2>Book Your Bin Cleaning</h2>
+  <p>Simple, clear pricing — no hidden fees.</p>
 
-  <p style="font-size:18px;">
-    All your bins cleaned from just <strong>£10</strong>
-  </p>
-
-  <a href="book.html" class="btn">Book Your Bin Cleaning</a>
-
-  <p style="margin-top:30px;">
-    At Bradford Bin Cleaning, we provide a reliable and regular wheelie bin
-    cleaning service across Bradford and surrounding areas.
-  </p>
-
-  <p>
-    All bins must be left at the curbside after collection day.
-    Once cleaned, disinfected, and deodorised, we return the bin back to your property.
-  </p>
-
-  <p>
-    Our jet-wash cleaning removes bad smells, bacteria, and grime —
-    keeping your bins fresh and hygienic.
-  </p>
-</section>
-
-<section class="before-after content">
-  <h2>Before & After</h2>
-
-  <div class="images">
-    <div>
-      <img src="images/bin-before.jpg" alt="Dirty wheelie bin before cleaning">
-      <p>Before</p>
+  <div class="pricing-boxes">
+    <div class="price-box">
+      <h3>One-Off Clean</h3>
+      <p class="price">£9 per bin</p>
     </div>
 
-    <div>
-      <img src="images/bin-after.jpg" alt="Clean wheelie bin after cleaning">
-      <p>After</p>
+    <div class="price-box">
+      <h3>Monthly</h3>
+      <p class="price">£5 per bin</p>
+    </div>
+
+    <div class="price-box">
+      <h3>2 Bins</h3>
+      <p class="price">£8 / month</p>
+    </div>
+
+    <div class="price-box">
+      <h3>3 Bins</h3>
+      <p class="price">£10 / month</p>
     </div>
   </div>
 
-  <p style="margin-top:20px;">
-    All bins are jet washed and disinfected on the day they are emptied.
-  </p>
+  <form class="form">
+    <h3>Your Details</h3>
+
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Address</label>
+    <input type="text" required>
+
+    <label>Phone Number</label>
+    <input type="tel" required>
+
+    <h3>Service Options</h3>
+
+    <label>Number of bins</label>
+    <select required>
+      <option value="">Select</option>
+      <option>1 Bin</option>
+      <option>2 Bins</option>
+      <option>3 Bins</option>
+    </select>
+
+    <label>Cleaning frequency</label>
+    <select required>
+      <option>One-Off</option>
+      <option>Every 2 Weeks</option>
+      <option>Monthly</option>
+      <option>Every 2 Months</option>
+    </select>
+
+    <button type="submit">Proceed to Payment</button>
+
+    <p style="text-align:center;margin-top:15px;">
+      🎉 £2 OFF your first clean when booking online
+    </p>
+  </form>
 </section>
 
 <footer>
