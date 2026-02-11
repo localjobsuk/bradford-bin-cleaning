@@ -5,59 +5,68 @@
   <title>Bradford Bin Cleaning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
-
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #f4f4f4;
       color: #333;
     }
 
-    /* TOP INFO BAR */
+    /* TOP CONTACT BAR */
     .top-bar {
       background: #0a7c3a;
-      color: #fff;
-      padding: 8px 20px;
+      color: white;
+      padding: 8px 15px;
+      text-align: center;
       font-size: 14px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
+    }
+
+    .top-bar a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     /* HEADER */
     header {
       background: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       border-bottom: 1px solid #eee;
-      flex-wrap: wrap;
     }
 
-    .logo {
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .branding {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 20px;
+      margin-bottom: 15px;
     }
 
-    .logo img {
-      height: 80px;
+    .branding img {
+      height: 90px;
     }
 
-    .logo h1 {
+    .branding h1 {
       margin: 0;
-      font-size: 26px;
+      font-size: 36px;
       color: #0a7c3a;
+      font-weight: bold;
     }
 
     nav a {
-      margin-left: 25px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
       color: #333;
+      font-size: 16px;
     }
 
     nav a:hover {
@@ -66,9 +75,10 @@
 
     /* HERO */
     .hero {
-      background: #f4f4f4;
-      padding: 50px 20px;
+      background: linear-gradient(to right, #0a7c3a, #13a455);
+      color: white;
       text-align: center;
+      padding: 50px 20px;
     }
 
     .hero h2 {
@@ -76,49 +86,54 @@
       margin-bottom: 10px;
     }
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 20px;
+    /* CONTENT */
+    .content {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     .btn {
+      display: inline-block;
       background: #0a7c3a;
       color: white;
-      padding: 12px 30px;
+      padding: 14px 25px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
-      display: inline-block;
+      border-radius: 5px;
+      margin-top: 20px;
     }
 
     .btn:hover {
       background: #095f2e;
     }
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
     /* BEFORE AFTER */
     .before-after {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .before-after h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .images {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       flex-wrap: wrap;
-      margin-top: 20px;
     }
 
-    .before-after div {
-      text-align: center;
-    }
-
-    .before-after img {
-      width: 100%;
-      max-width: 400px;
+    .images img {
+      width: 320px;
+      max-width: 100%;
       border-radius: 8px;
-      border: 3px solid #ddd;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -135,67 +150,52 @@
 
   <!-- TOP BAR -->
   <div class="top-bar">
-    <span><strong>Have any questions?</strong></span>
-    <span>📞 Call or WhatsApp: <strong>07840 507481</strong></span>
-    <span>📧 Email: <strong>bradfordbincleaning@gmail.com</strong></span>
+    📞 <a href="tel:07840507481">07840 507481</a> |
+    📧 <a href="mailto:bradfordbincleaning@gmail.com">bradfordbincleaning@gmail.com</a>
   </div>
 
   <!-- HEADER -->
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Bradford Bin Cleaning Logo">
-      <h1>Bradford Bin Cleaning</h1>
-    </div>
+    <div class="header-inner">
+      <div class="branding">
+        <img src="logo.png" alt="Bradford Bin Cleaning Logo">
+        <h1>Bradford Bin Cleaning</h1>
+      </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="book.html">Book Bin Cleaning</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="book.html">Book Bin Cleaning</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO -->
-  <div class="hero">
+  <section class="hero">
     <h2>Professional Wheelie Bin Cleaning & Sanitising</h2>
-    <p><strong>All your bins cleaned from just £10</strong></p>
-    <a href="book.html" class="btn">Book Bin Cleaning Now</a>
-  </div>
-
-  <!-- INFO -->
-  <section>
-    <p>
-      At <strong>Bradford Bin Cleaning</strong>, we offer a reliable and regular wheelie bin cleaning service across Bradford and surrounding areas.
-    </p>
-
-    <p>
-      All bins must be left at the curbside after collection day. Once cleaned, disinfected, and deodorised, we return the bin back to your property.
-    </p>
-
-    <p>
-      Our jet-wash cleaning removes bad smells, bacteria, and grime — keeping your bins fresh and hygienic.
-    </p>
+    <p>Reliable • Affordable • Hygienic</p>
   </section>
 
-  <!-- BEFORE & AFTER -->
-  <section>
-    <h2 style="text-align:center;">Before & After</h2>
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <p>
+      At Bradford Bin Cleaning, we offer a reliable and regular wheelie bin cleaning service.
+      All bins must be left curbside after collection. Once cleaned and disinfected,
+      bins are returned to your property.
+    </p>
 
-    <div class="before-after">
-      <div>
+    <a href="book.html" class="btn">Book Your Bin Cleaning</a>
+
+    <!-- BEFORE & AFTER -->
+    <section class="before-after">
+      <h2>Before & After</h2>
+      <div class="images">
         <img src="bin-before.jpg" alt="Dirty wheelie bin before cleaning">
-        <p><strong>Before</strong></p>
-      </div>
-
-      <div>
         <img src="bin-after.jpg" alt="Clean wheelie bin after cleaning">
-        <p><strong>After</strong></p>
       </div>
-    </div>
-
-    <p style="text-align:center; margin-top:20px;">
-      All bins are jet washed and disinfected on the day they are emptied.
-    </p>
-  </section>
+      <p>All bins are jet washed and disinfected on the day they are emptied.</p>
+    </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
