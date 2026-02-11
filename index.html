@@ -13,27 +13,33 @@
       color: #333;
     }
 
+    /* TOP NAV BAR */
+    .top-nav {
+      background: #0a7cff;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .top-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* HEADER WITH LOGO */
     header {
       background: #0a7cff;
       color: white;
       text-align: center;
-      padding: 30px 15px;
+      padding: 35px 15px 45px;
     }
 
     header img {
-      max-width: 120px;
-      margin-bottom: 10px;
-    }
-
-    nav {
-      margin-top: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
+      max-width: 260px; /* BIG LOGO */
+      margin: 20px auto;
+      display: block;
     }
 
     .contact-bar {
@@ -45,15 +51,15 @@
     section {
       background: white;
       margin: 20px;
-      padding: 30px 20px;
+      padding: 35px 20px;
       border-radius: 10px;
       text-align: center;
     }
 
     .cta {
       display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
+      margin-top: 25px;
+      padding: 16px 34px;
       background: #0a7cff;
       color: white;
       text-decoration: none;
@@ -64,15 +70,15 @@
     .before-after {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .before-after img {
-      max-width: 260px;
+      max-width: 280px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     footer {
@@ -88,16 +94,18 @@
 
 <body>
 
+<!-- TOP MENU FIRST -->
+<div class="top-nav">
+  <a href="#">Home</a>
+  <a href="#">Book Bin Cleaning</a>
+  <a href="#">Contact Us</a>
+</div>
+
+<!-- LOGO + TITLE -->
 <header>
   <img src="logo.png" alt="Bradford Bin Cleaning Logo">
   <h1>Bradford Bin Cleaning</h1>
   <p>Professional Wheelie Bin Cleaning & Sanitising</p>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Book Bin Cleaning</a>
-    <a href="#">Contact Us</a>
-  </nav>
 </header>
 
 <div class="contact-bar">
