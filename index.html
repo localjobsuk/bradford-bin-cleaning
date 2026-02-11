@@ -10,6 +10,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: #333;
+      scroll-behavior: smooth;
     }
 
     /* TOP INFO BAR */
@@ -92,6 +93,7 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      display: inline-block;
     }
 
     .btn:hover {
@@ -113,6 +115,10 @@
       margin-top: 20px;
     }
 
+    .before-after div {
+      text-align: center;
+    }
+
     .before-after img {
       max-width: 400px;
       width: 100%;
@@ -131,8 +137,8 @@
 
 <body>
 
-  <!-- TOP INFO BAR -->
-  <div class="top-bar">
+  <!-- CONTACT / TOP BAR -->
+  <div class="top-bar" id="contact">
     <span><strong>Have any questions?</strong></span>
     <span>📞 Call or WhatsApp: <strong>07840 507481</strong></span>
     <span>📧 Email: <strong>bradfordbincleaning@gmail.com</strong></span>
@@ -146,21 +152,21 @@
     </div>
 
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Book Bin Cleaning</a>
-      <a href="#">Contact Us</a>
+      <a href="#home">Home</a>
+      <a href="#book">Book Bin Cleaning</a>
+      <a href="#contact">Contact Us</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <div class="hero">
+  <div class="hero" id="home">
     <h2>Professional Wheelie Bin Cleaning & Sanitising</h2>
     <p><strong>All your bins cleaned from just £10</strong></p>
-    <a href="#" class="btn">Book Bin Cleaning Now</a>
+    <a href="#book" class="btn">Book Bin Cleaning Now</a>
   </div>
 
-  <!-- INFO -->
-  <section>
+  <!-- BOOK / INFO SECTION -->
+  <section id="book">
     <p>
       At <strong>Bradford Bin Cleaning</strong>, we provide a reliable and regular wheelie bin cleaning service across Bradford and surrounding areas.
     </p>
@@ -179,8 +185,15 @@
     <h2 style="text-align:center;">Before & After</h2>
 
     <div class="before-after">
-      <img src="bin-before.jpg" alt="Dirty wheelie bin before cleaning">
-      <img src="bin-after.jpg" alt="Clean wheelie bin after cleaning">
+      <div>
+        <img src="bin-before.jpg" alt="Dirty wheelie bin before cleaning">
+        <p><strong>Before</strong></p>
+      </div>
+
+      <div>
+        <img src="bin-after.jpg" alt="Clean wheelie bin after cleaning">
+        <p><strong>After</strong></p>
+      </div>
     </div>
 
     <p style="text-align:center; margin-top:20px;">
@@ -195,4 +208,3 @@
 
 </body>
 </html>
-
