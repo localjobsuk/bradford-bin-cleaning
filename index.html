@@ -9,18 +9,35 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
       color: #333;
+    }
+
+    /* TOP INFO BAR */
+    .top-bar {
+      background: #0a7c3a;
+      color: white;
+      padding: 8px 20px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     /* HEADER */
     header {
-      background: #0a7c3a;
-      color: white;
+      background: white;
       padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 1px solid #eee;
       flex-wrap: wrap;
     }
 
@@ -31,48 +48,48 @@
     }
 
     .logo img {
-      height: 70px;
+      height: 80px;
     }
 
     .logo h1 {
-      font-size: 22px;
       margin: 0;
+      font-size: 26px;
+      color: #0a7c3a;
     }
 
     nav a {
-      color: white;
+      margin-left: 25px;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: bold;
+      color: #333;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #0a7c3a;
     }
 
     /* HERO */
     .hero {
       background: #f4f4f4;
-      padding: 40px 20px;
+      padding: 45px 20px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 18px;
+      margin-bottom: 20px;
     }
 
     .btn {
-      display: inline-block;
       background: #0a7c3a;
       color: white;
-      padding: 12px 25px;
+      padding: 12px 28px;
       text-decoration: none;
-      margin-top: 20px;
       border-radius: 5px;
       font-weight: bold;
     }
@@ -81,11 +98,10 @@
       background: #095f2e;
     }
 
-    /* CONTENT */
     section {
-      padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
+      padding: 40px 20px;
     }
 
     /* BEFORE AFTER */
@@ -97,36 +113,30 @@
       margin-top: 20px;
     }
 
-    .before-after div {
-      text-align: center;
-    }
-
     .before-after img {
-      width: 100%;
       max-width: 400px;
+      width: 100%;
       border-radius: 8px;
       border: 3px solid #ddd;
     }
 
-    /* FOOTER */
     footer {
       background: #222;
       color: white;
       text-align: center;
       padding: 15px;
-      margin-top: 40px;
-    }
-
-    .contact {
-      background: #eef7f1;
-      text-align: center;
-      padding: 25px;
-      font-size: 16px;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- TOP INFO BAR -->
+  <div class="top-bar">
+    <span><strong>Have any questions?</strong></span>
+    <span>📞 Call or WhatsApp: <strong>07840 507481</strong></span>
+    <span>📧 Email: <strong>bradfordbincleaning@gmail.com</strong></span>
+  </div>
 
   <!-- HEADER -->
   <header>
@@ -141,13 +151,6 @@
       <a href="#">Contact Us</a>
     </nav>
   </header>
-
-  <!-- CONTACT BAR -->
-  <div class="contact">
-    <strong>Have any questions?</strong><br>
-    📞 Call or WhatsApp: <strong>07840 507481</strong><br>
-    📧 Email: <strong>bradfordbincleaning@gmail.com</strong>
-  </div>
 
   <!-- HERO -->
   <div class="hero">
@@ -171,20 +174,13 @@
     </p>
   </section>
 
-  <!-- BEFORE AFTER -->
+  <!-- BEFORE & AFTER -->
   <section>
     <h2 style="text-align:center;">Before & After</h2>
 
     <div class="before-after">
-      <div>
-        <img src="bin-before.jpg" alt="Dirty wheelie bin before cleaning">
-        <p><strong>Before</strong></p>
-      </div>
-
-      <div>
-        <img src="bin-after.jpg" alt="Clean wheelie bin after cleaning">
-        <p><strong>After</strong></p>
-      </div>
+      <img src="bin-before.jpg" alt="Dirty wheelie bin before cleaning">
+      <img src="bin-after.jpg" alt="Clean wheelie bin after cleaning">
     </div>
 
     <p style="text-align:center; margin-top:20px;">
@@ -199,3 +195,4 @@
 
 </body>
 </html>
+
