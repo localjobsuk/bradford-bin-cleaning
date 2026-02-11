@@ -13,33 +13,32 @@
       color: #333;
     }
 
-    /* TOP NAV BAR */
-    .top-nav {
+    /* HEADER */
+    .header {
       background: #0a7cff;
-      padding: 15px 0;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
     }
 
-    .top-nav a {
+    .header img {
+      max-width: 200px;
+    }
+
+    .nav a {
       color: white;
       text-decoration: none;
-      margin: 0 25px;
+      margin-left: 25px;
       font-weight: bold;
       font-size: 16px;
     }
 
-    /* HEADER WITH LOGO */
-    header {
+    .hero {
       background: #0a7cff;
       color: white;
       text-align: center;
-      padding: 35px 15px 45px;
-    }
-
-    header img {
-      max-width: 260px; /* BIG LOGO */
-      margin: 20px auto;
-      display: block;
+      padding: 40px 20px;
     }
 
     .contact-bar {
@@ -89,24 +88,41 @@
       font-size: 14px;
       margin-top: 40px;
     }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+      }
+
+      .nav {
+        margin-top: 15px;
+      }
+
+      .nav a {
+        margin: 0 10px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- TOP MENU FIRST -->
-<div class="top-nav">
-  <a href="#">Home</a>
-  <a href="#">Book Bin Cleaning</a>
-  <a href="#">Contact Us</a>
+<!-- PROFESSIONAL HEADER -->
+<div class="header">
+  <img src="logo.png" alt="Bradford Bin Cleaning Logo">
+
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Book Bin Cleaning</a>
+    <a href="#">Contact Us</a>
+  </div>
 </div>
 
-<!-- LOGO + TITLE -->
-<header>
-  <img src="logo.png" alt="Bradford Bin Cleaning Logo">
+<!-- HERO SECTION -->
+<div class="hero">
   <h1>Bradford Bin Cleaning</h1>
   <p>Professional Wheelie Bin Cleaning & Sanitising</p>
-</header>
+</div>
 
 <div class="contact-bar">
   <h3>Have any questions?</h3>
