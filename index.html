@@ -5,18 +5,19 @@
   <title>Bradford Bin Cleaning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="style.css">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #333;
-      scroll-behavior: smooth;
     }
 
     /* TOP INFO BAR */
     .top-bar {
       background: #0a7c3a;
-      color: white;
+      color: #fff;
       padding: 8px 20px;
       font-size: 14px;
       display: flex;
@@ -25,19 +26,13 @@
       flex-wrap: wrap;
     }
 
-    .top-bar span {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
     /* HEADER */
     header {
-      background: white;
+      background: #fff;
       padding: 15px 30px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       border-bottom: 1px solid #eee;
       flex-wrap: wrap;
     }
@@ -72,7 +67,7 @@
     /* HERO */
     .hero {
       background: #f4f4f4;
-      padding: 45px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
 
@@ -89,7 +84,7 @@
     .btn {
       background: #0a7c3a;
       color: white;
-      padding: 12px 28px;
+      padding: 12px 30px;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
@@ -109,8 +104,8 @@
     /* BEFORE AFTER */
     .before-after {
       display: flex;
-      gap: 20px;
       justify-content: center;
+      gap: 20px;
       flex-wrap: wrap;
       margin-top: 20px;
     }
@@ -120,8 +115,8 @@
     }
 
     .before-after img {
-      max-width: 400px;
       width: 100%;
+      max-width: 400px;
       border-radius: 8px;
       border: 3px solid #ddd;
     }
@@ -131,14 +126,15 @@
       color: white;
       text-align: center;
       padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- CONTACT / TOP BAR -->
-  <div class="top-bar" id="contact">
+  <!-- TOP BAR -->
+  <div class="top-bar">
     <span><strong>Have any questions?</strong></span>
     <span>📞 Call or WhatsApp: <strong>07840 507481</strong></span>
     <span>📧 Email: <strong>bradfordbincleaning@gmail.com</strong></span>
@@ -152,23 +148,23 @@
     </div>
 
     <nav>
-      <a href="#home">Home</a>
-      <a href="#book">Book Bin Cleaning</a>
-      <a href="#contact">Contact Us</a>
+      <a href="index.html">Home</a>
+      <a href="book.html">Book Bin Cleaning</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <div class="hero" id="home">
+  <div class="hero">
     <h2>Professional Wheelie Bin Cleaning & Sanitising</h2>
     <p><strong>All your bins cleaned from just £10</strong></p>
-    <a href="#book" class="btn">Book Bin Cleaning Now</a>
+    <a href="book.html" class="btn">Book Bin Cleaning Now</a>
   </div>
 
-  <!-- BOOK / INFO SECTION -->
-  <section id="book">
+  <!-- INFO -->
+  <section>
     <p>
-      At <strong>Bradford Bin Cleaning</strong>, we provide a reliable and regular wheelie bin cleaning service across Bradford and surrounding areas.
+      At <strong>Bradford Bin Cleaning</strong>, we offer a reliable and regular wheelie bin cleaning service across Bradford and surrounding areas.
     </p>
 
     <p>
