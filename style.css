@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f6fa;
+  background: #f4f6f8;
+  color: #333;
 }
 
 /* HEADER */
@@ -13,11 +14,11 @@ body {
   z-index: 1000;
 }
 
-/* TOP BAR */
 .top-bar {
   background: #082c46;
   text-align: center;
   padding: 8px;
+  font-size: 14px;
 }
 
 .top-bar a {
@@ -27,7 +28,6 @@ body {
   font-weight: bold;
 }
 
-/* NAV */
 .nav-wrapper {
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@ body {
 }
 
 .site-title {
-  font-size: 28px;
+  font-size: 26px;
   margin: 0;
 }
 
@@ -55,59 +55,103 @@ nav a:hover {
   color: #fbc531;
 }
 
-/* HERO */
-.hero {
+/* SECTIONS */
+.content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
   text-align: center;
-  padding: 60px 20px;
-  background: #dff9fb;
+}
+
+/* PRICING */
+.pricing-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.price-box {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.price-box h3 {
+  margin-top: 0;
+  color: #0a3d62;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 15px 0;
 }
 
 .btn {
   display: inline-block;
+  margin-top: 15px;
   background: #0a3d62;
   color: white;
   padding: 12px 25px;
-  text-decoration: none;
-  margin-top: 20px;
   border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* CONTENT */
-.content {
-  padding: 40px;
-  text-align: center;
+.btn:hover {
+  background: #082c46;
 }
 
 /* FORM */
 .form {
-  max-width: 400px;
-  margin: auto;
+  background: white;
+  padding: 35px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
-.form input, .form button {
+.form h3 {
+  margin-top: 0;
+  color: #0a3d62;
+}
+
+.form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+.form input,
+.form select {
   width: 100%;
   padding: 12px;
-  margin: 10px 0;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* BEFORE AFTER */
-.before-after .images {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.before-after img {
-  width: 300px;
-  border-radius: 10px;
-}
-
-/* MAP */
-.map {
+.form button {
   width: 100%;
-  height: 300px;
-  border: 0;
-  margin-top: 20px;
+  margin-top: 25px;
+  padding: 15px;
+  background: #0a3d62;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #082c46;
 }
 
 /* FOOTER */
@@ -116,4 +160,5 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
+  margin-top: 60px;
 }
