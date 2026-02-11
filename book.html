@@ -2,57 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Book Your Bin Cleaning</title>
+  <title>Book Bin Cleaning</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="top-bar">
-    📞 <a href="tel:07840507481">07840 507481</a>
-    📧 <a href="mailto:bradfordbincleaning@gmail.com">bradfordbincleaning@gmail.com</a>
-  </div>
+<div class="top-bar">
+  📞 <a href="tel:07840507481">07840 507481</a> |
+  📧 <a href="mailto:bradfordbincleaning@gmail.com">bradfordbincleaning@gmail.com</a>
+</div>
 
-  <div class="nav-wrapper">
-    <img src="logo.png" class="logo" alt="Bradford Bin Cleaning Logo">
-    <h1 class="site-title">Bradford Bin Cleaning</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="book.html">Book Bin Cleaning</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-  </div>
+<header class="header">
+  <img src="logo.png" alt="Bradford Bin Cleaning Logo" class="logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="book.html">Book Bin Cleaning</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
 </header>
 
-<section class="content">
-  <h2>Book Your Bin Cleaning</h2>
+<section class="booking">
+  <h1>Book Your Bin Cleaning</h1>
   <p>Simple, clear pricing — no hidden fees.</p>
 
-  <div class="pricing-boxes">
-    <div class="price-box">
-      <h3>One-Off Clean</h3>
-      <p class="price">£9 per bin</p>
-    </div>
-
-    <div class="price-box">
-      <h3>Monthly</h3>
-      <p class="price">£5 per bin</p>
-    </div>
-
-    <div class="price-box">
-      <h3>2 Bins</h3>
-      <p class="price">£8 / month</p>
-    </div>
-
-    <div class="price-box">
-      <h3>3 Bins</h3>
-      <p class="price">£10 / month</p>
-    </div>
-  </div>
-
-  <form class="form">
-    <h3>Your Details</h3>
-
+  <form class="booking-form">
     <label>Full Name</label>
     <input type="text" required>
 
@@ -62,29 +35,23 @@
     <label>Phone Number</label>
     <input type="tel" required>
 
-    <h3>Service Options</h3>
-
-    <label>Number of bins</label>
-    <select required>
-      <option value="">Select</option>
+    <label>Number of Bins</label>
+    <select>
       <option>1 Bin</option>
       <option>2 Bins</option>
       <option>3 Bins</option>
     </select>
 
-    <label>Cleaning frequency</label>
-    <select required>
-      <option>One-Off</option>
+    <label>Cleaning Frequency</label>
+    <select>
+      <option>One-Off Clean</option>
       <option>Every 2 Weeks</option>
       <option>Monthly</option>
       <option>Every 2 Months</option>
     </select>
 
-    <button type="submit">Proceed to Payment</button>
-
-    <p style="text-align:center;margin-top:15px;">
-      🎉 £2 OFF your first clean when booking online
-    </p>
+    <button type="submit" class="btn">Proceed to Payment</button>
+    <p class="offer">🎉 £2 OFF your first clean when booking online</p>
   </form>
 </section>
 
