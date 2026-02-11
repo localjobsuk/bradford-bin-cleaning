@@ -1,212 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Book Bin Cleaning | Bradford Bin Cleaning</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Book Bin Cleaning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background: #f4f4f4;
-    }
-
-    /* TOP BAR */
-    .top-bar {
-      background: #0a7c3a;
-      color: #fff;
-      padding: 8px 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    /* HEADER */
-    header {
-      background: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo img {
-      height: 70px;
-    }
-
-    .logo h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #0a7c3a;
-    }
-
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
-
-    nav a:hover {
-      color: #0a7c3a;
-    }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(to right, #0a7c3a, #13a455);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      margin: 0;
-      font-size: 36px;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-    /* CONTENT */
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-
-    .btn {
-      background: #0a7c3a;
-      color: white;
-      padding: 14px;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: 25px;
-      width: 100%;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #095f2e;
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4}
+header{background:#0a7c3a;color:#fff;text-align:center;padding:20px}
+.form-box{
+  max-width:600px;
+  background:#fff;
+  margin:40px auto;
+  padding:30px;
+  border-radius:8px;
+}
+input,select,button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+}
+button{
+  background:#0a7c3a;
+  color:#fff;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{background:#095f2e}
+</style>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    Book online or call / WhatsApp: <strong>07840 507481</strong>
-  </div>
+<header>
+<h1>Book Your Bin Cleaning</h1>
+</header>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Bradford Bin Cleaning Logo">
-      <h1>Bradford Bin Cleaning</h1>
-    </div>
+<div class="form-box">
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="Address" required>
+<input type="tel" placeholder="Phone Number" required>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="book.html">Book Bin Cleaning</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-  </header>
+<select required>
+<option value="">Select Number of Bins</option>
+<option>1 Bin</option>
+<option>2 Bins</option>
+<option>3 Bins</option>
+</select>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h2>Book Your Bin Cleaning</h2>
-    <p>Quick, simple & affordable wheelie bin cleaning</p>
-  </div>
-
-  <!-- BOOKING FORM -->
-  <div class="content">
-    <div class="card">
-      <form>
-
-        <label>Full Name</label>
-        <input type="text" placeholder="Your full name" required>
-
-        <label>Postcode</label>
-        <input type="text" placeholder="e.g. BD5 8XX" required>
-
-        <label>Mobile Number</label>
-        <input type="tel" placeholder="07XXXXXXXXX" required>
-
-        <label>Email Address</label>
-        <input type="email" placeholder="you@email.com">
-
-        <label>Number of Bins</label>
-        <select required>
-          <option value="">Select</option>
-          <option>1 Bin</option>
-          <option>2 Bins</option>
-          <option>3 Bins</option>
-        </select>
-
-        <label>Service Type</label>
-        <select required>
-          <option value="">Select</option>
-          <option>One-off Clean</option>
-          <option>Monthly Plan</option>
-          <option>6 Month Plan</option>
-          <option>12 Month Plan</option>
-        </select>
-
-        <button type="submit" class="btn">
-          Submit Booking Request
-        </button>
-
-      </form>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Bradford Bin Cleaning
-  </footer>
+<button type="submit">Proceed to Payment</button>
+</form>
+</div>
 
 </body>
 </html>
