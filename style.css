@@ -1,15 +1,9 @@
-/* ===== Global ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f7f7;
+  font-family: Arial, sans-serif;
+  background: #f6f6f6;
   color: #333;
-  line-height: 1.6;
 }
 
 .container {
@@ -18,29 +12,24 @@ body {
   margin: auto;
 }
 
-/* ===== Header & Navigation ===== */
 .site-header {
   background: #1f4f4f;
   padding: 10px 0;
 }
 
-.site-header .container {
+.header-flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   height: 55px;
 }
 
-.nav {
-  display: flex;
-  gap: 20px;
-}
-
 .nav a {
-  color: #fff;
+  color: white;
+  margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -50,65 +39,48 @@ body {
   text-decoration: underline;
 }
 
-/* ===== Hero ===== */
 .hero {
   background: #1f4f4f;
-  color: #fff;
+  color: white;
   padding: 60px 0;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  margin-bottom: 20px;
-}
-
-/* ===== Buttons ===== */
-.btn-primary {
+.btn {
+  display: inline-block;
+  margin-top: 20px;
   background: #0fa36b;
-  color: #fff;
+  color: white;
   padding: 12px 25px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
 }
 
-.btn-primary:hover {
-  background: #0c8256;
+.section {
+  padding: 40px 0;
 }
 
-/* ===== Sections ===== */
-.features {
-  background: #fff;
-  padding: 30px 0;
+.light {
+  background: white;
 }
 
-.grid-4 {
+.grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   text-align: center;
 }
 
-.pricing-preview {
-  padding: 40px 0;
-}
-
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.price-card {
-  background: #fff;
+.card {
+  background: white;
   padding: 20px;
-  border-radius: 5px;
   text-align: center;
 }
 
@@ -117,68 +89,39 @@ body {
   color: #0fa36b;
 }
 
-/* ===== Page Header ===== */
-.page-header {
-  background: #e9f5f1;
-  padding: 30px 0;
-  text-align: center;
-}
-
-/* ===== Booking Form ===== */
-.booking-section {
-  padding: 40px 0;
-}
-
-.booking-form {
-  background: #fff;
+.form {
+  background: white;
   padding: 25px;
   max-width: 500px;
   margin: auto;
-  border-radius: 5px;
 }
 
-.booking-form label {
-  display: block;
-  margin-top: 15px;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
+.form input,
+.form textarea,
+.form select {
   width: 100%;
+  margin-bottom: 15px;
   padding: 8px;
-  margin-top: 5px;
 }
 
 .price-box {
-  background: #f1f1f1;
+  background: #eee;
   padding: 15px;
-  margin: 15px 0;
+  margin-bottom: 15px;
   text-align: center;
   font-size: 1.2rem;
 }
 
-/* ===== Footer ===== */
-.site-footer {
+.footer {
   background: #1f4f4f;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
   margin-top: 40px;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .site-header .container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
+  .header-flex { flex-direction: column; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
 }
