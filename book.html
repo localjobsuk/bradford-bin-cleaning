@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Bin Clean | Bradford Bin Cleaning</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Book a Bin Clean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="container">
-    <img src="img/logo.png" alt="Bradford Bin Cleaning" class="logo" />
+  <div class="container header-flex">
+    <img src="img/logo.png" class="logo" alt="Bradford Bin Cleaning">
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="booking.html" class="active">Book Now</a>
@@ -19,77 +19,61 @@
   </div>
 </header>
 
-<section class="page-header">
+<section class="section">
   <div class="container">
-    <h1>Book Your Bin Clean</h1>
-    <p>Quick, simple booking – prices shown instantly</p>
-  </div>
-</section>
+    <h2>Book Your Bin Clean</h2>
 
-<section class="booking-section">
-  <div class="container">
-    <form class="booking-form">
-
-      <label for="service">Service Type</label>
-      <select id="service" required>
-        <option value="oneoff">One‑Off Clean (£9 per bin)</option>
-        <option value="monthly">Monthly Service</option>
+    <form class="form">
+      <label>Service Type</label>
+      <select id="service">
+        <option value="one">One-Off (£9 per bin)</option>
+        <option value="monthly">Monthly</option>
       </select>
 
-      <label for="bins">Number of Bins</label>
-      <select id="bins" required>
+      <label>Number of Bins</label>
+      <select id="bins">
         <option value="1">1 Bin</option>
         <option value="2">2 Bins</option>
         <option value="3">3 Bins</option>
       </select>
 
       <div class="price-box">
-        <p>Total Price:</p>
-        <strong>£<span id="price">9</span></strong>
+        Total: £<span id="price">9</span>
       </div>
 
-      <label for="name">Full Name</label>
-      <input type="text" id="name" required />
+      <label>Name</label>
+      <input type="text" required>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" required />
+      <label>Phone</label>
+      <input type="tel" required>
 
-      <label for="address">Address</label>
-      <textarea id="address" rows="3" required></textarea>
+      <label>Address</label>
+      <textarea required></textarea>
 
-      <button type="submit" class="btn-primary">Request Booking</button>
-
+      <button class="btn">Request Booking</button>
     </form>
   </div>
 </section>
 
-<footer class="site-footer">
+<footer class="footer">
   <p>📞 07840 507481 | ✉ bradfordbincleaning@gmail.com</p>
-  <p>Serving Bradford & Surrounding Areas</p>
 </footer>
 
 <script>
 const service = document.getElementById('service');
 const bins = document.getElementById('bins');
-const priceEl = document.getElementById('price');
+const price = document.getElementById('price');
 
 function updatePrice() {
-  const binCount = Number(bins.value);
-  let price = 0;
-
-  if (service.value === 'oneoff') {
-    price = binCount * 9;
+  const b = Number(bins.value);
+  if (service.value === 'one') {
+    price.textContent = b * 9;
   } else {
-    if (binCount === 1) price = 5;
-    if (binCount === 2) price = 8;
-    if (binCount === 3) price = 10;
+    price.textContent = b === 1 ? 5 : b === 2 ? 8 : 10;
   }
-
-  priceEl.textContent = price;
 }
-
-service.addEventListener('change', updatePrice);
-bins.addEventListener('change', updatePrice);
+service.onchange = updatePrice;
+bins.onchange = updatePrice;
 updatePrice();
 </script>
 
