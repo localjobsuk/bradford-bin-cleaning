@@ -1,63 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Book Bin Cleaning</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Bin Clean | Bradford Bin Cleaning</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<div class="top-bar">
-  📞 <a href="tel:07840507481">07840 507481</a> |
-  📧 <a href="mailto:bradfordbincleaning@gmail.com">bradfordbincleaning@gmail.com</a>
-</div>
-
-<header class="header">
-  <img src="logo.png" alt="Bradford Bin Cleaning Logo" class="logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="book.html">Book Bin Cleaning</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+<header class="site-header">
+  <div class="container">
+    <img src="img/logo.png" alt="Bradford Bin Cleaning" class="logo" />
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="booking.html" class="active">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section class="booking">
-  <h1>Book Your Bin Cleaning</h1>
-  <p>Simple, clear pricing — no hidden fees.</p>
-
-  <form class="booking-form">
-    <label>Full Name</label>
-    <input type="text" required>
-
-    <label>Address</label>
-    <input type="text" required>
-
-    <label>Phone Number</label>
-    <input type="tel" required>
-
-    <label>Number of Bins</label>
-    <select>
-      <option>1 Bin</option>
-      <option>2 Bins</option>
-      <option>3 Bins</option>
-    </select>
-
-    <label>Cleaning Frequency</label>
-    <select>
-      <option>One-Off Clean</option>
-      <option>Every 2 Weeks</option>
-      <option>Monthly</option>
-      <option>Every 2 Months</option>
-    </select>
-
-    <button type="submit" class="btn">Proceed to Payment</button>
-    <p class="offer">🎉 £2 OFF your first clean when booking online</p>
-  </form>
+<section class="page-header">
+  <div class="container">
+    <h1>Book Your Bin Clean</h1>
+    <p>Quick, simple booking – prices shown instantly</p>
+  </div>
 </section>
 
-<footer>
-  © 2026 Bradford Bin Cleaning
+<section class="booking-section">
+  <div class="container">
+    <form class="booking-form">
+
+      <label for="service">Service Type</label>
+      <select id="service" required>
+        <option value="oneoff">One‑Off Clean (£9 per bin)</option>
+        <option value="monthly">Monthly Service</option>
+      </select>
+
+      <label for="bins">Number of Bins</label>
+      <select id="bins" required>
+        <option value="1">1 Bin</option>
+        <option value="2">2 Bins</option>
+        <option value="3">3 Bins</option>
+      </select>
+
+      <div class="price-box">
+        <p>Total Price:</p>
+        <strong>£<span id="price">9</span></strong>
+      </div>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label for="address">Address</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <button type="submit" class="btn-primary">Request Booking</button>
+
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>📞 07840 507481 | ✉ bradfordbincleaning@gmail.com</p>
+  <p>Serving Bradford & Surrounding Areas</p>
 </footer>
+
+<script>
+const service = document.getElementById('service');
+const bins = document.getElementById('bins');
+const priceEl = document.getElementById('price');
+
+function updatePrice() {
+  const binCount = Number(bins.value);
+  let price = 0;
+
+  if (service.value === 'oneoff') {
+    price = binCount * 9;
+  } else {
+    if (binCount === 1) price = 5;
+    if (binCount === 2) price = 8;
+    if (binCount === 3) price = 10;
+  }
+
+  priceEl.textContent = price;
+}
+
+service.addEventListener('change', updatePrice);
+bins.addEventListener('change', updatePrice);
+updatePrice();
+</script>
 
 </body>
 </html>
