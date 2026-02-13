@@ -1,294 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Regional Commercial Bin Cleaning Contractor | West Yorkshire</title>
-  <meta name="description" content="Professional commercial bin cleaning services across Bradford, Leeds and Wakefield. Structured waste sanitisation contracts for hospitality, restaurants and commercial estates.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Regional Commercial Bin Cleaning Contractor | West Yorkshire</title>
+<meta name="description" content="Professional commercial bin cleaning services across Bradford, Leeds and Wakefield. Structured waste sanitisation contracts for hospitality, restaurants and commercial estates.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font for premium corporate feel -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f4f6f8;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
+<style>
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#f4f6f8;
+color:#1a1a1a;
+line-height:1.6;
+}
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
 
-    /* HEADER */
-    .site-header {
-      background: #111;
-      padding: 18px 0;
-    }
+/* HEADER */
+.site-header{
+background:#111;
+padding:18px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-    .header-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.header-flex{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .logo {
-      height: 50px;
-    }
+.logo{height:50px;}
 
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 30px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
+.nav a{
+color:#fff;
+text-decoration:none;
+margin-left:30px;
+font-weight:500;
+letter-spacing:.5px;
+}
 
-    .nav a:hover {
-      opacity: 0.7;
-    }
+.nav a:hover{opacity:.7;}
 
-    /* HERO */
-    .hero {
-      background:
-        linear-gradient(
-          to right,
-          rgba(15,15,15,0.85),
-          rgba(15,15,15,0.65)
-        ),
-        url("bin-after.jpg") center/cover no-repeat;
+/* HERO */
+.hero{
+background:
+linear-gradient(to right,rgba(15,15,15,.85),rgba(15,15,15,.65)),
+url("bin-after.jpg") center/cover no-repeat;
+color:#fff;
+padding:170px 0;
+}
 
-      color: #fff;
-      padding: 170px 0;
-    }
+.hero h1{
+font-size:52px;
+max-width:750px;
+margin-bottom:20px;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      font-weight: 700;
-      max-width: 750px;
-      margin-bottom: 20px;
-    }
+.hero p{
+font-size:20px;
+max-width:650px;
+margin-bottom:35px;
+}
 
-    .hero p {
-      font-size: 20px;
-      max-width: 650px;
-      margin-bottom: 35px;
-      opacity: 0.95;
-    }
+.btn{
+display:inline-block;
+padding:15px 32px;
+background:#e10600;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+border-radius:4px;
+transition:.3s;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 15px 32px;
-      background: #e10600;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px;
-      transition: 0.3s;
-    }
+.btn:hover{background:#b80000;}
 
-    .btn:hover {
-      background: #b80000;
-    }
+/* TRUST STRIP */
+.trust-strip{
+background:#fff;
+padding:50px 0;
+border-bottom:1px solid #eee;
+}
 
-    /* METRICS */
-    .metrics {
-      background: #e10600;
-      color: #fff;
-      padding: 70px 0;
-      text-align: center;
-    }
+.trust-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:60px;
+text-align:center;
+}
 
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
-    }
+.trust-grid strong{
+display:block;
+font-size:16px;
+}
 
-    .metric h2 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+/* METRICS */
+.metrics{
+background:#e10600;
+color:#fff;
+padding:70px 0;
+text-align:center;
+}
 
-    /* SECTION */
-    .section {
-      padding: 90px 0;
-      background: #fff;
-    }
+.metrics-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
 
-    .section.dark {
-      background: #1f1f1f;
-      color: #fff;
-    }
+.metric h2{
+font-size:42px;
+margin-bottom:10px;
+}
 
-    .section h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
+/* SECTIONS */
+.section{
+padding:90px 0;
+background:#fff;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
+.section.dark{
+background:#1f1f1f;
+color:#fff;
+}
 
-    .card {
-      background: #fff;
-      padding: 35px;
-      border-radius: 6px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
+.section h2{
+font-size:34px;
+margin-bottom:20px;
+}
 
-    .section.dark .card {
-      background: #2a2a2a;
-      box-shadow: none;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
 
-    .card:hover {
-      transform: translateY(-6px);
-    }
+.card{
+background:#fff;
+padding:35px;
+border-radius:6px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
+.section.dark .card{
+background:#2a2a2a;
+box-shadow:none;
+}
 
-    .cta-band {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 80px 20px;
-    }
+.card:hover{transform:translateY(-6px);}
 
-    .cta-band h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+/* TESTIMONIALS */
+.testimonial{
+display:none;
+opacity:0;
+transition:opacity .6s ease;
+}
 
-    /* FOOTER */
-    .footer {
-      background: #0d0d0d;
-      color: #aaa;
-      padding: 50px 20px;
-      text-align: center;
-      font-size: 14px;
-    }
+.testimonial.active{
+display:block;
+opacity:1;
+}
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
+/* CTA */
+.cta-band{
+background:#111;
+color:#fff;
+text-align:center;
+padding:80px 20px;
+}
 
-      .hero p {
-        font-size: 18px;
-      }
-    }
-  </style>
+.cta-band h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+/* FOOTER */
+.footer{
+background:#0d0d0d;
+color:#aaa;
+padding:50px 20px;
+text-align:center;
+font-size:14px;
+}
+
+/* ANIMATION */
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:all .8s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+.hero h1{font-size:36px;}
+.hero p{font-size:18px;}
+}
+</style>
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="container header-flex">
-    <img src="logo.png" alt="Bradford Bin Cleaning" class="logo">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<div class="container header-flex">
+<img src="logo.png" alt="Bradford Bin Cleaning" class="logo">
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
 </header>
 
 <section class="hero">
-  <div class="container">
-    <h1>Structured Commercial Bin Cleaning Contracts Across West Yorkshire</h1>
-    <p>Professional waste bin sanitisation services for hospitality operators, restaurants and commercial estates in Bradford, Leeds and Wakefield.</p>
-    <a href="contact.html" class="btn">Request Commercial Site Assessment</a>
-  </div>
+<div class="container">
+<h1>Structured Commercial Bin Cleaning Contracts Across West Yorkshire</h1>
+<p>Professional waste bin sanitisation services for hospitality operators, restaurants and commercial estates in Bradford, Leeds and Wakefield.</p>
+<a href="contact.html" class="btn">Request Commercial Site Assessment</a>
+</div>
 </section>
 
-<section class="metrics">
-  <div class="container metrics-grid">
-    <div class="metric">
-      <h2>120+</h2>
-      <p>Active Commercial Sites</p>
-    </div>
-    <div class="metric">
-      <h2>4,000+</h2>
-      <p>Bins Sanitised Monthly</p>
-    </div>
-    <div class="metric">
-      <h2>98%</h2>
-      <p>Client Retention</p>
-    </div>
-    <div class="metric">
-      <h2>5★</h2>
-      <p>Google Rating</p>
-    </div>
-  </div>
+<section class="trust-strip fade-up">
+<div class="container trust-grid">
+<div><strong>Fully Insured</strong><small>Public Liability Cover</small></div>
+<div><strong>Environmental Compliant</strong><small>Responsible Wastewater Handling</small></div>
+<div><strong>5★ Rated</strong><small>Google Business Profile</small></div>
+<div><strong>Regional Contractor</strong><small>West Yorkshire Coverage</small></div>
+</div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2>Why Commercial Clients Choose Us</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Fully Insured Contractor</h3>
-        <p>Comprehensive public liability cover for commercial contracts.</p>
-      </div>
-      <div class="card">
-        <h3>Structured Service Schedules</h3>
-        <p>Recurring contracts aligned with operational waste cycles.</p>
-      </div>
-      <div class="card">
-        <h3>Environmental Compliance</h3>
-        <p>Responsible wastewater handling and regulatory alignment.</p>
-      </div>
-      <div class="card">
-        <h3>Multi-Site Capability</h3>
-        <p>Supporting regional operators across multiple business locations.</p>
-      </div>
-    </div>
-  </div>
+<section class="metrics fade-up">
+<div class="container metrics-grid">
+<div class="metric"><h2>120+</h2><p>Active Commercial Sites</p></div>
+<div class="metric"><h2>4,000+</h2><p>Bins Sanitised Monthly</p></div>
+<div class="metric"><h2>98%</h2><p>Client Retention</p></div>
+<div class="metric"><h2>5★</h2><p>Google Rating</p></div>
+</div>
 </section>
 
-<section class="section dark">
-  <div class="container">
-    <h2>Service Areas & Sectors</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Bradford</h3>
-      </div>
-      <div class="card">
-        <h3>Leeds</h3>
-      </div>
-      <div class="card">
-        <h3>Wakefield</h3>
-      </div>
-      <div class="card">
-        <h3>Hotels</h3>
-      </div>
-      <div class="card">
-        <h3>Restaurants</h3>
-      </div>
-    </div>
-  </div>
+<section class="section fade-up">
+<div class="container">
+<h2>Why Commercial Clients Choose Us</h2>
+<div class="grid">
+<div class="card"><h3>Fully Insured Contractor</h3><p>Comprehensive public liability cover for commercial contracts.</p></div>
+<div class="card"><h3>Structured Service Schedules</h3><p>Recurring contracts aligned with operational waste cycles.</p></div>
+<div class="card"><h3>Environmental Compliance</h3><p>Responsible wastewater handling and regulatory alignment.</p></div>
+<div class="card"><h3>Multi-Site Capability</h3><p>Supporting regional operators across multiple business locations.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section fade-up" style="background:#f9fafb;">
+<div class="container" style="text-align:center;">
+<h2>What Commercial Clients Say</h2>
+
+<div class="testimonial active">
+<p style="font-size:20px;">"Consistent, professional and reliable. Our restaurant bins are now maintained on a structured schedule."</p>
+<strong>— Operations Manager, Leeds</strong>
+</div>
+
+<div class="testimonial">
+<p style="font-size:20px;">"Improved hygiene standards immediately. Excellent service communication."</p>
+<strong>— Facilities Director, Bradford</strong>
+</div>
+
+<div class="testimonial">
+<p style="font-size:20px;">"Reliable contractor for multiple sites. Highly recommended."</p>
+<strong>— Estate Manager, Wakefield</strong>
+</div>
+
+</div>
 </section>
 
 <section class="cta-band">
-  <h2>Professional Commercial Waste Sanitisation Contractor</h2>
-  <a href="contact.html" class="btn">Request Assessment</a>
+<h2>Professional Commercial Waste Sanitisation Contractor</h2>
+<a href="contact.html" class="btn">Request Assessment</a>
 </section>
 
 <footer class="footer">
-  <p>© 2026 Bradford Bin Cleaning | Regional Commercial Contractor</p>
-  <p>Bradford • Leeds • Wakefield</p>
-  <p>07840 507481 | bradfordbincleaning@gmail.com</p>
+<p>© 2026 Bradford Bin Cleaning | Regional Commercial Contractor</p>
+<p>Bradford • Leeds • Wakefield</p>
+<p>07840 507481 | bradfordbincleaning@gmail.com</p>
 </footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add("show");}
+});
+});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+let index=0;
+const testimonials=document.querySelectorAll(".testimonial");
+function showTestimonial(){
+testimonials.forEach(t=>t.classList.remove("active"));
+testimonials[index].classList.add("active");
+index=(index+1)%testimonials.length;
+}
+setInterval(showTestimonial,5000);
+</script>
 
 </body>
 </html>
