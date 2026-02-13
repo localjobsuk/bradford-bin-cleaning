@@ -1,9 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.6;
   background-color: #0f1720;
-  color: #f5f5f5;
   color: #ffffff;
 }
 
@@ -15,23 +18,16 @@ body {
   margin: auto;
 }
 
-.center-text {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
 /* HEADER */
 
 .site-header {
   background: #0b1118;
-  padding: 20px 0;
-  border-bottom: 1px solid #1e2a36;
   padding: 25px 0;
 }
 
 .header-flex {
-@@ -37,101 +31,90 @@ body {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -40,22 +36,16 @@ body {
 }
 
 .logo {
-  height: 55px;
   height: 75px;   /* Bigger logo */
 }
 
 .nav a {
-  color: #ffffff;
   margin-left: 30px;
   text-decoration: none;
-  margin-left: 25px;
   color: #ffffff;
   font-weight: 500;
-  transition: 0.3s ease;
 }
 
-.nav a:hover,
-.nav .active {
 .nav a:hover {
   color: #c6a84a;
 }
@@ -63,18 +53,12 @@ body {
 /* HERO */
 
 .hero {
-  background: linear-gradient(rgba(10,15,22,0.85), rgba(10,15,22,0.85)),
-              url("https://images.unsplash.com/photo-1581579186913-45ac4b3e2d40?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px;
   text-align: center;
   padding: 130px 20px;
   background: #111c26;
 }
 
 .hero h1 {
-  font-size: 42px;
   font-size: 40px;
   margin-bottom: 20px;
 }
@@ -82,29 +66,17 @@ body {
 .hero p {
   margin-bottom: 30px;
   font-size: 18px;
-  margin-bottom: 25px;
 }
 
-.hero-phone {
-  color: #c6a84a;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* BUTTON */
 /* BUTTONS */
 
 .btn {
-  display: inline-block;
   background: #c6a84a;
   color: #0f1720;
-  padding: 14px 28px;
   padding: 14px 30px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
-  border-radius: 4px;
-  transition: 0.3s ease;
 }
 
 .primary-btn {
@@ -118,7 +90,6 @@ body {
 
 .btn:hover {
   background: #e2c15a;
-  transform: translateY(-2px);
 }
 
 /* METRICS */
@@ -126,14 +97,12 @@ body {
 .metrics {
   padding: 80px 20px;
   background: #0b1118;
-  padding: 70px 20px;
   text-align: center;
 }
 
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
   gap: 40px;
 }
 
@@ -142,130 +111,57 @@ body {
   color: #c6a84a;
 }
 
-.metric p {
-  margin-top: 10px;
-  font-size: 15px;
-}
-
 /* SECTIONS */
 
 .section {
-  padding: 90px 20px;
-}
-
-.section.light {
-  background: #ffffff;
-  color: #222;
   padding: 100px 20px;
 }
 
 .section.dark {
-@@ -140,7 +123,7 @@ body {
+  background: #111c26;
+}
 
 .section h2 {
   text-align: center;
-  margin-bottom: 40px;
   margin-bottom: 50px;
   font-size: 32px;
 }
 
-@@ -149,89 +132,36 @@ body {
+/* GRID */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
   gap: 30px;
 }
 
 .card {
   background: #1a2632;
-  padding: 30px;
-  border-radius: 6px;
-  transition: 0.3s ease;
-}
-
-.section.light .card {
-  background: #f3f3f3;
   padding: 40px;
   text-align: center;
   border-radius: 8px;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   transform: translateY(-5px);
 }
 
 .sector-link {
   text-decoration: none;
   color: inherit;
-  display: block;
 }
 
-/* CASE STUDY */
-
-.case-study {
-  background: #ffffff;
-  padding: 35px;
-  border-left: 5px solid #c6a84a;
-  border-radius: 6px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* REVIEWS */
 /* CENTER CTA */
 
-.reviews {
-  background: #c6a84a;
-  padding: 25px 20px;
 .cta-center {
   text-align: center;
-  font-weight: 600;
-  color: #0f1720;
   margin-top: 60px;
 }
 
 /* FOOTER */
 
 .footer {
-  background: #0b1118;
-  padding: 30px 20px;
   text-align: center;
-  font-size: 14px;
-}
-
-.footer a {
-  color: #c6a84a;
-  text-decoration: none;
-}
-
-/* WHATSAPP */
-
-.whatsapp {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* FADE ANIMATION */
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
   padding: 40px 20px;
   background: #0b1118;
 }
