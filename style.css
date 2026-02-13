@@ -1,17 +1,8 @@
-/* ===============================
-   GLOBAL
-=================================*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #0f1720;
-  color: #ffffff;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1a1a1a;
   line-height: 1.6;
 }
 
@@ -21,14 +12,9 @@ body {
   margin: auto;
 }
 
-/* ===============================
-   HEADER
-=================================*/
-
 .site-header {
-  background: #0b1118;
-  padding: 20px 0;
-  border-bottom: 1px solid #1e2935;
+  background: #111;
+  padding: 15px 0;
 }
 
 .header-flex {
@@ -38,30 +24,25 @@ body {
 }
 
 .logo {
-  height: 70px;
+  height: 50px;
 }
 
 .nav a {
-  margin-left: 30px;
+  color: #fff;
   text-decoration: none;
-  color: #ffffff;
+  margin-left: 25px;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-.nav a:hover,
-.nav .active {
-  color: #c6a84a;
+.nav a:hover {
+  opacity: 0.7;
 }
-
-/* ===============================
-   HERO
-=================================*/
 
 .hero {
-  padding: 140px 20px;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("bin-after.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 120px 0;
   text-align: center;
-  background: linear-gradient(180deg, #111c26 0%, #0f1720 100%);
 }
 
 .hero h1 {
@@ -71,152 +52,78 @@ body {
 
 .hero p {
   font-size: 18px;
-  color: #cbd5e1;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
-/* ===============================
-   BUTTONS
-=================================*/
-
 .btn {
-  background: #c6a84a;
-  color: #0f1720;
-  padding: 14px 30px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
   display: inline-block;
-  transition: 0.3s;
+  padding: 14px 28px;
+  background: #e10600;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 .btn:hover {
-  background: #e2c15a;
-  transform: translateY(-2px);
+  background: #b80000;
 }
 
-.large-btn {
-  padding: 18px 40px;
-  font-size: 18px;
+.section {
+  padding: 80px 0;
+  background: #fff;
 }
 
-/* ===============================
-   METRICS
-=================================*/
+.section.dark {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.section.dark .card {
+  background: #2b2b2b;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
 
 .metrics {
-  background: #0b1118;
-  padding: 80px 20px;
+  background: #e10600;
+  color: #fff;
+  padding: 60px 0;
   text-align: center;
 }
 
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-}
-
-.metric h2 {
-  font-size: 40px;
-  color: #c6a84a;
-  margin-bottom: 10px;
-}
-
-/* ===============================
-   SECTIONS
-=================================*/
-
-.section {
-  padding: 100px 20px;
-}
-
-.section.dark {
-  background: #111c26;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 50px;
-}
-
-/* ===============================
-   GRID + CARDS
-=================================*/
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
 }
 
-.card {
-  background: #1a2632;
-  padding: 40px;
-  border-radius: 8px;
-  text-align: center;
-  transition: 0.3s;
+.metric h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-.sector-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ===============================
-   FORM STYLING
-=================================*/
-
-.form-container {
-  max-width: 800px;
-  margin: auto;
-  background: #111c26;
-  padding: 60px 40px;
-  border-radius: 10px;
-}
-
-.form-container h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.professional-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.professional-form input,
-.professional-form select,
-.professional-form textarea {
-  padding: 16px;
-  border-radius: 6px;
-  border: 1px solid #2a3a4a;
-  background: #0f1720;
-  color: #ffffff;
-}
-
-.professional-form button {
-  padding: 16px;
-  background: #c6a84a;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* ===============================
-   FOOTER
-=================================*/
 
 .footer {
-  background: #0b1118;
-  padding: 40px 20px;
+  background: #111;
+  color: #ccc;
   text-align: center;
-  border-top: 1px solid #1e2935;
+  padding: 40px 20px;
+  font-size: 14px;
 }
