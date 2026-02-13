@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-<!-- Structured Data -->
+<!-- Local Business Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,6 +33,30 @@
     "name": "Commercial Bin Cleaning",
     "areaServed": "Leeds"
   }
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [{
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://yourdomain.com/"
+ },{
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Locations",
+   "item": "https://yourdomain.com/#locations"
+ },{
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Commercial Bin Cleaning Leeds",
+   "item": "https://yourdomain.com/commercial-bin-cleaning-leeds.html"
+ }]
 }
 </script>
 
@@ -60,7 +84,6 @@
 
 <section class="section fade-up">
   <div class="container">
-
     <h2>Professional Commercial Bin Cleaning in Leeds</h2>
 
     <p>
@@ -79,57 +102,31 @@
       <a href="commercial-bin-cleaning-bradford.html">Bradford</a> and 
       <a href="commercial-bin-cleaning-wakefield.html">Wakefield</a>.
     </p>
-
   </div>
 </section>
 
 <section class="section dark fade-up">
   <div class="container">
-
     <h2>Why Leeds Businesses Choose Our Service</h2>
 
     <div class="grid">
-
       <div class="card">
         <h3>Fully Insured Contractor</h3>
         <p>Public liability coverage for commercial service agreements.</p>
       </div>
-
       <div class="card">
         <h3>Scheduled Recurring Contracts</h3>
         <p>Aligned with waste collection cycles and operational needs.</p>
       </div>
-
       <div class="card">
         <h3>Environmental Compliance</h3>
         <p>Responsible wastewater management and hygiene standards.</p>
       </div>
-
       <div class="card">
         <h3>Multi-Site Capability</h3>
         <p>Supporting regional operators across West Yorkshire.</p>
       </div>
-
     </div>
-  </div>
-</section>
-
-<section class="section fade-up">
-  <div class="container">
-
-    <h2>Trusted Commercial Contractor in Leeds</h2>
-
-    <p>
-      We work with hotels, restaurants, retail operators and commercial property managers requiring consistent and professional waste bin sanitisation.
-    </p>
-
-    <p>
-      If you operate in hospitality, see our dedicated 
-      <a href="commercial-bin-cleaning-hotels.html">hotel cleaning services</a> 
-      or our structured 
-      <a href="commercial-bin-cleaning-restaurants.html">restaurant waste cleaning solutions</a>.
-    </p>
-
   </div>
 </section>
 
@@ -139,9 +136,39 @@
 </section>
 
 <footer class="footer">
-  <p>© 2026 Bradford Bin Cleaning | Regional Commercial Contractor</p>
-  <p>Serving Bradford • Leeds • Wakefield</p>
-  <p>07840 507481 | bradfordbincleaning@gmail.com</p>
+  <div class="container footer-grid">
+
+    <div>
+      <h4>Locations</h4>
+      <ul>
+        <li><a href="commercial-bin-cleaning-bradford.html">Commercial Bin Cleaning Bradford</a></li>
+        <li><a href="commercial-bin-cleaning-leeds.html">Commercial Bin Cleaning Leeds</a></li>
+        <li><a href="commercial-bin-cleaning-wakefield.html">Commercial Bin Cleaning Wakefield</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Sectors</h4>
+      <ul>
+        <li><a href="commercial-bin-cleaning-hotels.html">Hotel Bin Cleaning Services</a></li>
+        <li><a href="commercial-bin-cleaning-restaurants.html">Restaurant Bin Cleaning Services</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Bradford Bin Cleaning | West Yorkshire Commercial Contractor</p>
+    <p>07840 507481 | bradfordbincleaning@gmail.com</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>
