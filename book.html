@@ -2,43 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Request Commercial Quote</title>
+  <title>Request Commercial Quote | Bradford Bin Cleaning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-container">
+      <img src="logo.png" alt="Bradford Bin Cleaning" class="logo">
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="book.html" class="active">Request Quote</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <section class="section dark">
-  <div class="form-container">
+  <div class="container">
 
-    <h1>Request Commercial Site Assessment</h1>
+    <div class="form-wrapper">
+      <h1>Request Commercial Site Assessment</h1>
 
-    <form class="professional-form">
+      <form class="professional-form">
 
-      <input type="text" placeholder="Business Name" required>
+        <input type="text" placeholder="Business Name" required>
 
-      <input type="text" placeholder="Contact Person" required>
+        <input type="text" placeholder="Contact Person" required>
 
-      <input type="email" placeholder="Email Address" required>
+        <input type="email" placeholder="Email Address" required>
 
-      <input type="tel" placeholder="Phone Number" required>
+        <input type="tel" placeholder="Phone Number" required>
 
-      <select required>
-        <option value="">Select Business Type</option>
-        <option>Hotel</option>
-        <option>Restaurant</option>
-        <option>Property Management</option>
-        <option>Commercial Estate</option>
-      </select>
+        <input type="text" placeholder="Site Address / Location" required>
 
-      <textarea placeholder="Tell us about your site requirements..." rows="5"></textarea>
+        <select required>
+          <option value="">Select Business Type</option>
+          <option>Hotel</option>
+          <option>Restaurant</option>
+          <option>Property Management</option>
+          <option>Commercial Estate</option>
+        </select>
 
-      <button type="submit" class="btn large-btn">Submit Request</button>
+        <input type="number" placeholder="Estimated Number of Bins">
 
-    </form>
+        <textarea placeholder="Additional details about your site requirements..."></textarea>
+
+        <button type="submit">Submit Request</button>
+
+      </form>
+    </div>
 
   </div>
 </section>
+
+<footer class="footer">
+  <p>© 2026 Bradford Bin Cleaning | Regional Contractor</p>
+</footer>
 
 </body>
 </html>
