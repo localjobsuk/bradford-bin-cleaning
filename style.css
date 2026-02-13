@@ -1,3 +1,5 @@
+/* ===== GLOBAL ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +8,10 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
   background-color: #0f1720;
-  color: #ffffff;
+  color: #f5f5f5;
 }
-
-/* CONTAINER */
 
 .container {
   width: 90%;
@@ -18,11 +19,18 @@ body {
   margin: auto;
 }
 
-/* HEADER */
+.center-text {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
 
 .site-header {
   background: #0b1118;
-  padding: 25px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #1e2a36;
 }
 
 .header-flex {
@@ -31,90 +39,77 @@ body {
   align-items: center;
 }
 
-.logo-container {
-  flex: 1;
-}
-
 .logo {
-  height: 75px;   /* Bigger logo */
+  height: 55px;
 }
 
 .nav a {
-  margin-left: 30px;
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
+  margin-left: 25px;
   font-weight: 500;
+  transition: 0.3s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav .active {
   color: #c6a84a;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 
 .hero {
+  background: linear-gradient(rgba(10,15,22,0.85), rgba(10,15,22,0.85)),
+              url("https://images.unsplash.com/photo-1581579186913-45ac4b3e2d40?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
   text-align: center;
-  padding: 130px 20px;
-  background: #111c26;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 20px;
 }
 
 .hero p {
-  margin-bottom: 30px;
   font-size: 18px;
+  margin-bottom: 25px;
 }
 
-/* BUTTONS */
-
-.btn {
-  background: #c6a84a;
-  color: #0f1720;
-  padding: 14px 30px;
+.hero-phone {
+  color: #c6a84a;
   text-decoration: none;
-  border-radius: 6px;
   font-weight: 600;
 }
 
-.primary-btn {
-  font-size: 18px;
-}
+/* ===== BUTTON ===== */
 
-.large-btn {
-  font-size: 20px;
-  padding: 18px 40px;
+.btn {
+  display: inline-block;
+  background: #c6a84a;
+  color: #0f1720;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
   background: #e2c15a;
+  transform: translateY(-2px);
 }
 
-/* METRICS */
-
-.metrics {
-  padding: 80px 20px;
-  background: #0b1118;
-  text-align: center;
-}
-
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-}
-
-.metric h2 {
-  font-size: 42px;
-  color: #c6a84a;
-}
-
-/* SECTIONS */
+/* ===== SECTIONS ===== */
 
 .section {
-  padding: 100px 20px;
+  padding: 90px 20px;
+}
+
+.section.light {
+  background: #ffffff;
+  color: #222;
 }
 
 .section.dark {
@@ -123,45 +118,105 @@ body {
 
 .section h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 32px;
 }
 
-/* GRID */
+/* ===== GRID & CARDS ===== */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 
 .card {
   background: #1a2632;
-  padding: 40px;
-  text-align: center;
-  border-radius: 8px;
+  padding: 30px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.section.light .card {
+  background: #f3f3f3;
+}
+
+.card h3 {
+  margin-bottom: 15px;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
+/* Make sector cards clickable properly */
 
 .sector-link {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
-/* CENTER CTA */
-
-.cta-center {
-  text-align: center;
-  margin-top: 60px;
+.sector-link:hover {
+  cursor: pointer;
 }
 
-/* FOOTER */
+/* ===== TESTIMONIAL ===== */
+
+.testimonial {
+  background: #1a2632;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c6a84a;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* ===== FOOTER ===== */
 
 .footer {
-  text-align: center;
-  padding: 40px 20px;
   background: #0b1118;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #c6a84a;
+  text-decoration: none;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .nav a {
+    margin-left: 15px;
+  }
+
 }
