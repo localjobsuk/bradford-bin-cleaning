@@ -2,121 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Request Commercial Quote | Bradford Bin Cleaning</title>
+  <title>Request Commercial Quote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-flex">
-    <img src="logo.png" alt="Bradford Bin Cleaning" class="logo">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="book.html" class="active">Request Quote</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<section class="section dark">
+  <div class="form-container">
 
-<section class="hero small-hero">
-  <div class="container">
-    <h1>Commercial Quote & Site Assessment</h1>
-    <p>Structured service proposals for commercial and managed residential clients.</p>
-  </div>
-</section>
+    <h1>Request Commercial Site Assessment</h1>
 
-<section class="section light">
-  <div class="container form-container">
+    <form class="professional-form">
 
-    <h2>Request Service Proposal</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      Complete the form below and our operations team will review your requirements and provide a structured service proposal tailored to your site.
-    </p>
+      <input type="text" placeholder="Business Name" required>
 
-    <form action="https://formsubmit.co/bradfordbincleaning@gmail.com" method="POST" class="professional-form">
+      <input type="text" placeholder="Contact Person" required>
 
-      <div class="form-row">
-        <input type="text" name="Company Name" placeholder="Company / Organisation Name" required>
-        <input type="text" name="Contact Name" placeholder="Primary Contact Name" required>
-      </div>
+      <input type="email" placeholder="Email Address" required>
 
-      <div class="form-row">
-        <input type="email" name="Email" placeholder="Email Address" required>
-        <input type="tel" name="Phone" placeholder="Contact Number" required>
-      </div>
+      <input type="tel" placeholder="Phone Number" required>
 
-      <div class="form-row">
-        <input type="text" name="Site Address" placeholder="Site Address" required>
-      </div>
+      <select required>
+        <option value="">Select Business Type</option>
+        <option>Hotel</option>
+        <option>Restaurant</option>
+        <option>Property Management</option>
+        <option>Commercial Estate</option>
+      </select>
 
-      <div class="form-row">
-        <select name="Property Type" required>
-          <option value="">Select Property Type</option>
-          <option>Hotel / Hospitality</option>
-          <option>Restaurant / Food Venue</option>
-          <option>Apartment Block / Managed Residential</option>
-          <option>Retail / Commercial Unit</option>
-          <option>Office Building</option>
-          <option>Other</option>
-        </select>
-      </div>
+      <textarea placeholder="Tell us about your site requirements..." rows="5"></textarea>
 
-      <div class="form-row">
-        <select name="Service Frequency" required>
-          <option value="">Preferred Service Frequency</option>
-          <option>Weekly</option>
-          <option>Fortnightly</option>
-          <option>Monthly</option>
-          <option>Custom Schedule</option>
-        </select>
-      </div>
-
-      <div class="form-row">
-        <textarea name="Additional Information" placeholder="Please provide details such as number of bins, site access restrictions, waste area layout, or compliance requirements." rows="5"></textarea>
-      </div>
-
-      <button type="submit" class="btn full-width">Request Commercial Proposal</button>
-
-      <input type="hidden" name="_subject" value="New Commercial Quote Request">
-      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" class="btn large-btn">Submit Request</button>
 
     </form>
 
   </div>
 </section>
-
-<section class="section dark">
-  <div class="container">
-    <h2>What Happens Next?</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>1. Requirement Review</h3>
-        <p>We assess your site details and service expectations.</p>
-      </div>
-      <div class="card">
-        <h3>2. Service Proposal</h3>
-        <p>A structured quotation outlining frequency, scope and pricing.</p>
-      </div>
-      <div class="card">
-        <h3>3. Service Commencement</h3>
-        <p>Scheduled onboarding into our regional service routes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <p>© 2026 Bradford Bin Cleaning | Regional Waste Sanitisation Contractor</p>
-  <p>
-    📞 <a href="tel:07840507481">07840 507481</a> |
-    ✉ bradfordbincleaning@gmail.com
-  </p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/447840507481" target="_blank">
-  WhatsApp
-</a>
 
 </body>
 </html>
