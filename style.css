@@ -2,9 +2,9 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #0f0f0f;
-  color: #f5f5f5;
-  line-height: 1.6;
+  background: #111;
+  color: #f2f2f2;
+  line-height: 1.7;
 }
 
 .container {
@@ -14,8 +14,8 @@ body {
 }
 
 .site-header {
-  background: #000;
-  padding: 15px 0;
+  background: #0c0c0c;
+  padding: 18px 0;
   border-bottom: 1px solid #222;
 }
 
@@ -26,14 +26,14 @@ body {
 }
 
 .logo {
-  height: 55px;
+  height: 60px;
 }
 
 .nav a {
-  color: #d4af37;
-  margin-left: 25px;
+  color: #c6a84a;
+  margin-left: 30px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -43,28 +43,29 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
               url('bin-before.jpg') center/cover;
-  padding: 120px 0;
+  padding: 140px 0;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #ccc;
+  color: #ddd;
+  margin-bottom: 35px;
 }
 
 .btn {
   display: inline-block;
-  background: #d4af37;
+  background: #c6a84a;
   color: black;
-  padding: 12px 28px;
+  padding: 14px 34px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
@@ -73,11 +74,16 @@ body {
 
 .btn:hover {
   background: white;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
+}
+
+.section.light {
+  background: #f7f7f7;
+  color: #111;
 }
 
 .section.dark {
@@ -86,84 +92,59 @@ body {
 
 .section h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: #d4af37;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+  color: #c6a84a;
+}
+
+.section.light h2 {
+  color: #111;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  gap: 30px;
 }
 
 .card {
   background: #1a1a1a;
-  padding: 30px;
+  padding: 35px;
   border: 1px solid #222;
-  text-align: center;
   transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #d4af37;
+.section.light .card {
+  background: white;
+  border: 1px solid #ddd;
 }
 
-.price {
-  font-size: 1.8rem;
-  color: #d4af37;
-  margin-top: 10px;
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #c6a84a;
 }
 
 .testimonial {
   background: #1a1a1a;
-  padding: 25px;
-  border-left: 4px solid #d4af37;
-  margin-bottom: 20px;
-}
-
-.form {
-  background: #1a1a1a;
   padding: 30px;
-  max-width: 550px;
-  margin: auto;
-  border: 1px solid #222;
+  margin-bottom: 25px;
+  border-left: 4px solid #c6a84a;
 }
 
-.form input,
-.form textarea,
-.form select {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 12px;
-  background: #0f0f0f;
-  border: 1px solid #333;
-  color: white;
-}
-
-.form input:focus,
-.form textarea:focus,
-.form select:focus {
-  outline: none;
-  border-color: #d4af37;
-}
-
-.price-box {
-  background: #000;
-  padding: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 1.2rem;
-  border: 1px solid #222;
+.section.light .testimonial {
+  background: white;
 }
 
 .footer {
-  background: #000;
+  background: #0c0c0c;
   color: #aaa;
   text-align: center;
-  padding: 30px 0;
-  margin-top: 50px;
+  padding: 40px 0;
+}
+
+.footer a {
+  color: #c6a84a;
+  text-decoration: none;
 }
 
 .whatsapp {
@@ -172,11 +153,11 @@ body {
   right: 20px;
   background: #25D366;
   color: white;
-  padding: 14px 18px;
+  padding: 14px 20px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
 .whatsapp:hover {
@@ -185,5 +166,5 @@ body {
 
 @media (max-width: 768px) {
   .header-flex { flex-direction: column; }
-  .hero h1 { font-size: 1.8rem; }
+  .hero h1 { font-size: 2rem; }
 }
