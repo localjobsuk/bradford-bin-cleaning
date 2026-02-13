@@ -1,5 +1,3 @@
-/* ===== GLOBAL ===== */
-
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +23,7 @@ body {
   text-align: center;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
 .site-header {
   background: #0b1118;
@@ -56,7 +54,7 @@ body {
   color: #c6a84a;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero {
   background: linear-gradient(rgba(10,15,22,0.85), rgba(10,15,22,0.85)),
@@ -83,7 +81,7 @@ body {
   font-weight: 600;
 }
 
-/* ===== BUTTON ===== */
+/* BUTTON */
 
 .btn {
   display: inline-block;
@@ -101,7 +99,31 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===== SECTIONS ===== */
+/* METRICS */
+
+.metrics {
+  background: #0b1118;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.metric h2 {
+  font-size: 42px;
+  color: #c6a84a;
+}
+
+.metric p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* SECTIONS */
 
 .section {
   padding: 90px 20px;
@@ -122,7 +144,7 @@ body {
   font-size: 32px;
 }
 
-/* ===== GRID & CARDS ===== */
+/* GRID */
 
 .grid {
   display: grid;
@@ -141,16 +163,10 @@ body {
   background: #f3f3f3;
 }
 
-.card h3 {
-  margin-bottom: 15px;
-}
-
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
-
-/* Make sector cards clickable properly */
 
 .sector-link {
   text-decoration: none;
@@ -158,22 +174,28 @@ body {
   display: block;
 }
 
-.sector-link:hover {
-  cursor: pointer;
+/* CASE STUDY */
+
+.case-study {
+  background: #ffffff;
+  padding: 35px;
+  border-left: 5px solid #c6a84a;
+  border-radius: 6px;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* ===== TESTIMONIAL ===== */
+/* REVIEWS */
 
-.testimonial {
-  background: #1a2632;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-left: 4px solid #c6a84a;
-  border-radius: 4px;
-  font-style: italic;
+.reviews {
+  background: #c6a84a;
+  padding: 25px 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #0f1720;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 .footer {
   background: #0b1118;
@@ -187,7 +209,7 @@ body {
   text-decoration: none;
 }
 
-/* ===== WHATSAPP BUTTON ===== */
+/* WHATSAPP */
 
 .whatsapp {
   position: fixed;
@@ -199,24 +221,17 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s ease;
 }
 
-.whatsapp:hover {
-  transform: translateY(-3px);
+/* FADE ANIMATION */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
-
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  .nav a {
-    margin-left: 15px;
-  }
-
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
