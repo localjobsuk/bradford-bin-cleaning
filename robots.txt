@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.westyorkshirewastesanitation.co.uk/sitemap.xml
+Sitemap: https://localjobsuk.github.io/bradford-bin-cleaning/sitemap.xml
