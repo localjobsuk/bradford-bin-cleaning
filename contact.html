@@ -5,10 +5,12 @@
     <title>Request a Quote | West Yorkshire Waste Sanitation Group</title>
     <meta name="description" content="Request a commercial or residential bin cleaning quote across West Yorkshire.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="canonical" href="https://localjobsuk.github.io/bradford-bin-cleaning/contact.html">
-
     <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
 </head>
 
 <body>
@@ -53,46 +55,48 @@
             Please provide as much detail as possible so we can assess service requirements and confirm availability.
         </p>
 
-        <form class="contact-form">
+        <form id="enquiryForm" class="contact-form">
 
             <label>Enquiry Type</label>
-            <select>
-                <option>Commercial</option>
-                <option>Residential</option>
+            <select name="enquiryType" required>
+                <option value="Commercial">Commercial</option>
+                <option value="Residential">Residential</option>
             </select>
 
             <label>Full Name</label>
-            <input type="text" placeholder="Your full name">
+            <input type="text" name="fullName" placeholder="Your full name" required>
 
             <label>Company Name (if applicable)</label>
-            <input type="text" placeholder="Company name">
+            <input type="text" name="companyName" placeholder="Company name">
 
             <label>Email Address</label>
-            <input type="email" placeholder="Your email">
+            <input type="email" name="email" placeholder="Your email" required>
 
             <label>Phone Number</label>
-            <input type="tel" placeholder="Phone number">
+            <input type="tel" name="phone" placeholder="Phone number" required>
 
             <label>Postcode</label>
-            <input type="text" placeholder="Service postcode">
+            <input type="text" name="postcode" placeholder="Service postcode">
 
             <label>Number of Bins</label>
-            <input type="text" placeholder="How many bins?">
+            <input type="text" name="numBins" placeholder="How many bins?">
 
             <label>Service Frequency Required</label>
-            <select>
-                <option>Weekly</option>
-                <option>Fortnightly</option>
-                <option>4 Weekly</option>
-                <option>Monthly</option>
+            <select name="frequency">
+                <option value="Weekly">Weekly</option>
+                <option value="Fortnightly">Fortnightly</option>
+                <option value="4 Weekly">4 Weekly</option>
+                <option value="Monthly">Monthly</option>
             </select>
 
             <label>Additional Details</label>
-            <textarea rows="5" placeholder="Additional information"></textarea>
+            <textarea name="details" rows="5" placeholder="Additional information"></textarea>
 
             <button type="submit" class="btn-primary">Submit Enquiry</button>
 
         </form>
+
+        <p id="confirmationMessage" style="color: green; font-weight: bold; margin-top: 10px;"></p>
     </div>
 </section>
 
@@ -133,6 +137,53 @@
         © 2026 West Yorkshire Waste Sanitation Group Ltd. All Rights Reserved.
     </div>
 </footer>
+
+<script>
+  // Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyADxEq-T2PW4Nk8ERbXjcq6oJzdDHu8F6E",
+    authDomain: "westyorkshirebincleaning.firebaseapp.com",
+    projectId: "westyorkshirebincleaning",
+    storageBucket: "westyorkshirebincleaning.appspot.com",
+    messagingSenderId: "236905379736",
+    appId: "1:236905379736:web:d179462e7d3b670be05ded",
+    measurementId: "G-905799P3VY"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // Form submit
+  const form = document.getElementById('enquiryForm');
+  const confirmation = document.getElementById('confirmationMessage');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const data = {
+      enquiryType: form.enquiryType.value,
+      fullName: form.fullName.value,
+      companyName: form.companyName.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      postcode: form.postcode.value,
+      numBins: form.numBins.value,
+      frequency: form.frequency.value,
+      details: form.details.value,
+      submittedAt: new Date()
+    };
+
+    db.collection('enquiries').add(data)
+      .then(() => {
+        confirmation.innerText = "Thank you! Your enquiry has been submitted.";
+        form.reset();
+      })
+      .catch((error) => {
+        confirmation.innerText = "Error: " + error.message;
+      });
+  });
+</script>
 
 </body>
 </html>
