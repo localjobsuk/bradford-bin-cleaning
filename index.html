@@ -7,7 +7,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-body{background:#f5f7fa;color:#333;line-height:1.6;}
+body{background:#f4f6f9;color:#333;}
 
 header{
   background:#1e3a8a;
@@ -18,8 +18,6 @@ header{
   align-items:center;
   flex-wrap:wrap;
 }
-
-header h1{font-size:20px;}
 nav a{
   color:#fff;
   text-decoration:none;
@@ -35,18 +33,14 @@ nav a:hover{opacity:0.8;}
   padding:60px 20px;
 }
 
-.hero h2{font-size:28px;margin-bottom:15px;}
-
 section{
   max-width:900px;
   margin:40px auto;
-  padding:30px;
   background:#fff;
+  padding:30px;
   border-radius:8px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
-
-section h3{margin-bottom:15px;color:#1e3a8a;}
 
 form{
   display:flex;
@@ -54,26 +48,42 @@ form{
   gap:12px;
 }
 
-input,select,textarea,button{
+input,select,textarea{
   padding:10px;
   border-radius:6px;
   border:1px solid #ccc;
-  font-size:14px;
 }
 
 button{
+  padding:10px;
+  border:none;
   background:#1e3a8a;
   color:#fff;
-  border:none;
-  cursor:pointer;
   font-weight:bold;
+  border-radius:6px;
+  cursor:pointer;
 }
 
-button:hover{background:#2563eb;}
+button:hover{
+  background:#2563eb;
+}
 
-.phone-area{
-  text-align:center;
-  margin-top:20px;
+.success-message{
+  display:none;
+  margin-top:15px;
+  padding:10px;
+  background:#d1fae5;
+  color:#065f46;
+  border-radius:6px;
+}
+
+.error-message{
+  display:none;
+  margin-top:15px;
+  padding:10px;
+  background:#fee2e2;
+  color:#991b1b;
+  border-radius:6px;
 }
 
 .phone-number{
@@ -89,78 +99,80 @@ footer{
   padding:20px;
   margin-top:40px;
 }
-
-@media(max-width:768px){
-  nav{margin-top:10px;}
-  .hero h2{font-size:22px;}
-}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>West Yorkshire Bin Cleaning</h1>
+  <h2>West Yorkshire Bin Cleaning</h2>
   <nav>
     <a href="index.html">Home</a>
-    <a href="commercial-bin-cleaning-bradford.html">Bradford</a>
-    <a href="commercial-bin-cleaning-leeds.html">Leeds</a>
-    <a href="commercial-bin-cleaning-wakefield.html">Wakefield</a>
-    <a href="residential-bin-cleaning-west-yorkshire.html">Domestic</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Bradford</a>
+    <a href="#">Leeds</a>
+    <a href="#">Wakefield</a>
+    <a href="#">Domestic</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
 <div class="hero">
-  <h2>Professional Bin Cleaning Services</h2>
-  <p>Commercial & Residential Bin Cleaning Across West Yorkshire</p>
+  <h1>Professional Bin Cleaning Services</h1>
+  <p>Residential & Commercial Across West Yorkshire</p>
 </div>
 
 <section>
-  <h3>Get a Free Quote</h3>
+<h3>Get a Free Quote</h3>
 
-  <form onsubmit="submitEnquiry(event)">
+<form id="enquiryForm">
 
-    <select name="enquiryType" required>
-      <option value="">Select Enquiry Type</option>
-      <option value="Residential">Residential</option>
-      <option value="Commercial">Commercial</option>
-    </select>
+<select name="enquiryType" required>
+<option value="">Select Enquiry Type</option>
+<option value="Residential">Residential</option>
+<option value="Commercial">Commercial</option>
+</select>
 
-    <input type="text" name="fullName" placeholder="Full Name" required>
-    <input type="text" name="companyName" placeholder="Company Name">
+<input type="text" name="fullName" placeholder="Full Name" required>
+<input type="text" name="companyName" placeholder="Company Name">
 
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="text" name="phone" placeholder="Phone Number" required>
-    <input type="text" name="postcode" placeholder="Postcode" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="text" name="phone" placeholder="Phone Number" required>
+<input type="text" name="postcode" placeholder="Postcode" required>
 
-    <input type="number" name="numberOfBins" placeholder="Number of Bins" required>
+<input type="number" name="numberOfBins" placeholder="Number of Bins" required>
 
-    <select name="serviceFrequency" required>
-      <option value="">Service Frequency</option>
-      <option value="Weekly">Weekly</option>
-      <option value="Fortnightly">Fortnightly</option>
-      <option value="Monthly">Monthly</option>
-    </select>
+<select name="serviceFrequency" required>
+<option value="">Service Frequency</option>
+<option value="Weekly">Weekly</option>
+<option value="Fortnightly">Fortnightly</option>
+<option value="Monthly">Monthly</option>
+</select>
 
-    <textarea name="additionalDetails" placeholder="Additional Details"></textarea>
+<textarea name="additionalDetails" placeholder="Additional Details"></textarea>
 
-    <button type="submit">Submit Enquiry</button>
+<button type="submit">Submit Enquiry</button>
 
-  </form>
+<div class="success-message" id="successMsg">
+✅ Enquiry submitted successfully!
+</div>
 
-  <div class="phone-area">
-    <button onclick="showPhone()">Show Phone Number</button>
-    <span class="phone-number" id="phoneNumber">01234 567890</span>
-  </div>
+<div class="error-message" id="errorMsg">
+❌ Error submitting enquiry. Try again.
+</div>
+
+</form>
+
+<br>
+
+<button onclick="showPhone()">Show Phone Number</button>
+<span class="phone-number" id="phoneNumber">01234 567890</span>
 
 </section>
 
 <footer>
-  © 2026 West Yorkshire Bin Cleaning | All Rights Reserved
+© 2026 West Yorkshire Bin Cleaning
 </footer>
 
 <script type="module">
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.1/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.6.1/firebase-firestore.js";
 
@@ -170,45 +182,49 @@ const firebaseConfig = {
   projectId: "westyorkshirebincleaning",
   storageBucket: "westyorkshirebincleaning.firebasestorage.app",
   messagingSenderId: "236905379736",
-  appId: "1:236905379736:web:d179462e7d3b670be05ded",
-  measurementId: "G-905799P3VY"
+  appId: "1:236905379736:web:d179462e7d3b670be05ded"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-window.submitEnquiry = async function(event){
-  event.preventDefault();
+const form = document.getElementById("enquiryForm");
+const successMsg = document.getElementById("successMsg");
+const errorMsg = document.getElementById("errorMsg");
 
-  const form = event.target;
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  successMsg.style.display = "none";
+  errorMsg.style.display = "none";
+
+  const formData = new FormData(form);
 
   const data = {
-    enquiryType: form.enquiryType.value,
-    fullName: form.fullName.value,
-    companyName: form.companyName.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    postcode: form.postcode.value,
-    numberOfBins: form.numberOfBins.value,
-    serviceFrequency: form.serviceFrequency.value,
-    additionalDetails: form.additionalDetails.value,
+    enquiryType: formData.get("enquiryType"),
+    fullName: formData.get("fullName"),
+    companyName: formData.get("companyName"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    postcode: formData.get("postcode"),
+    numberOfBins: formData.get("numberOfBins"),
+    serviceFrequency: formData.get("serviceFrequency"),
+    additionalDetails: formData.get("additionalDetails"),
     createdAt: new Date()
   };
 
-  try{
-    await addDoc(collection(db,"enquiries"),data);
-    alert("Enquiry submitted successfully!");
+  try {
+    await addDoc(collection(db, "enquiries"), data);
+    successMsg.style.display = "block";
     form.reset();
-  }catch(error){
-    alert("Error submitting form.");
+  } catch (error) {
     console.error(error);
+    errorMsg.style.display = "block";
   }
-}
+});
 
 window.showPhone = function(){
   document.getElementById("phoneNumber").style.display = "inline";
-}
-
+};
 </script>
 
 </body>
