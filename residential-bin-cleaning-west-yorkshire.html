@@ -1,217 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Residential Bin Cleaning West Yorkshire | West Yorkshire Waste Sanitation Group</title>
-<meta name="description" content="Professional residential wheelie bin cleaning across West Yorkshire. Monthly and fortnightly domestic bin sanitation services.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Domestic Bin Cleaning | West Yorkshire Waste Sanitation Group</title>
+    <meta name="description" content="Request a domestic bin cleaning subscription across West Yorkshire.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<link rel="canonical" href="https://localjobsuk.github.io/bradford-bin-cleaning/residential-bin-cleaning-west-yorkshire.html">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-<meta property="og:title" content="Residential Bin Cleaning West Yorkshire">
-<meta property="og:description" content="Domestic wheelie bin cleaning services across West Yorkshire.">
-<meta property="og:type" content="website">
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-.phone-button {
-    background:#2563eb;
-    color:#fff;
-    padding:12px 20px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:600;
-    display:inline-block;
-    cursor:pointer;
-    transition:0.3s ease;
-}
-.phone-button:hover { background:#1d4ed8; }
-.phone-number { display:none; font-weight:700; margin-top:10px; }
-</style>
-
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyADxEq-T2PW4Nk8ERbXjcq6oJzdDHu8F6E",
+            authDomain: "westyorkshirebincleaning.firebaseapp.com",
+            projectId: "westyorkshirebincleaning",
+            storageBucket: "westyorkshirebincleaning.appspot.com",
+            messagingSenderId: "236905379736",
+            appId: "1:236905379736:web:d179462e7d3b670be05ded",
+            measurementId: "G-905799P3VY"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
 </head>
 <body>
 
 <header class="header">
-<div class="container nav-container">
-<div class="logo">
-<h2>West Yorkshire Waste Sanitation Group</h2>
-</div>
-<nav>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="commercial-bin-cleaning-bradford.html">Commercial Bradford</a></li>
-<li><a href="commercial-bin-cleaning-leeds.html">Commercial Leeds</a></li>
-<li><a href="commercial-bin-cleaning-wakefield.html">Commercial Wakefield</a></li>
-<li><a href="residential-bin-cleaning-west-yorkshire.html">Domestic</a></li>
-<li><a href="contact.html" class="nav-cta">Request Quote</a></li>
-</ul>
-</nav>
-</div>
+    <div class="container nav-container">
+        <div class="logo">West Yorkshire Waste Sanitation Group</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="commercial-bin-cleaning-west-yorkshire.html">Commercial</a></li>
+            <li><a href="residential-bin-cleaning-west-yorkshire.html">Domestic</a></li>
+            <li><a href="contact.html" class="nav-cta">Request Quote</a></li>
+        </ul>
+    </div>
 </header>
 
 <section class="hero">
-<div class="container">
-<h1>Residential Bin Cleaning West Yorkshire</h1>
-<p>Professional domestic wheelie bin cleaning services for households across West Yorkshire.</p>
-
-<button class="phone-button" onclick="document.getElementById('phone').style.display='block'; this.style.display='none';">
-Click to View Phone Number
-</button>
-<div id="phone" class="phone-number">📞 07840 507481</div>
-
-</div>
+    <div class="container">
+        <h1>Domestic Bin Cleaning</h1>
+        <p>Subscription-based household bin cleaning across West Yorkshire.</p>
+    </div>
 </section>
 
 <section class="section">
-<div class="container">
-<h2>Domestic Wheelie Bin Cleaning Services</h2>
-<p>We provide reliable and affordable domestic bin cleaning for households across West Yorkshire. Our service removes odours, bacteria, maggots and residue buildup using high-pressure hot water sanitation systems.</p>
-</div>
-</section>
+    <div class="container">
+        <h2>Request a Domestic Subscription</h2>
+        <form id="domesticForm">
+            <label>Enquiry Type</label>
+            <input type="text" value="Residential" readonly>
 
-<section class="section dark-section">
-<div class="container">
-<h2>Bins We Clean</h2>
-<ul>
-<li>General Waste Bins</li>
-<li>Recycling Bins</li>
-<li>Garden Waste Bins</li>
-</ul>
-<p>Internal wash, external clean, disinfecting treatment and deodorising included.</p>
-</div>
-</section>
+            <label>Full Name</label>
+            <input type="text" name="fullName" required>
 
-<section class="section">
-<div class="container">
-<h2>Service Frequency Options</h2>
-<ul>
-<li>Every 4 Weeks (Most Popular)</li>
-<li>Fortnightly Service</li>
-<li>One-Off Deep Clean</li>
-</ul>
-</div>
-</section>
+            <label>Email</label>
+            <input type="email" name="email" required>
 
-<section class="section dark-section">
-<div class="container">
-<h2>Areas We Cover</h2>
-<p>Bradford • Leeds • Wakefield • Shipley • Pudsey • Morley • Bingley • Garforth • Rothwell</p>
-</div>
-</section>
+            <label>Phone</label>
+            <input type="tel" name="phone" required>
 
-<section class="section">
-<div class="container">
-<h2>Why Choose Our Domestic Service</h2>
-<ul>
-<li>Affordable Recurring Plans</li>
-<li>Friendly Local Operatives</li>
-<li>High-Pressure Sanitisation Equipment</li>
-<li>Reliable Scheduled Attendance</li>
-<li>Environmentally Responsible Disposal</li>
-</ul>
-</div>
-</section>
+            <label>Postcode</label>
+            <input type="text" name="postcode" required>
 
-<section class="section dark-section">
-<div class="container">
-<h2>Residential Bin Cleaning FAQs</h2>
+            <label>Subscription Plan</label>
+            <select name="plan">
+                <option>Standard – £12–£15 / 4-weekly</option>
+                <option>Enhanced Hygiene – £16–£18 / 2-weekly</option>
+                <option>Premium – £19–£22 / custom</option>
+            </select>
 
-<h3>How often should my wheelie bin be cleaned?</h3>
-<p>Most customers choose every 4 weeks, but fortnightly options are available for higher usage households.</p>
+            <label>Additional Details</label>
+            <textarea name="details" rows="5"></textarea>
 
-<h3>Do you clean recycling bins?</h3>
-<p>Yes, we clean general waste, recycling and garden waste bins.</p>
-
-<h3>Do I need to be home?</h3>
-<p>No. As long as bins are left accessible after council collection, we can complete the service.</p>
-
-<h3>What areas do you cover?</h3>
-<p>We operate across Bradford, Leeds, Wakefield and surrounding West Yorkshire districts.</p>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<h2>Also Available</h2>
-<ul>
-<li><a href="commercial-bin-cleaning-bradford.html">Commercial Bradford</a></li>
-<li><a href="commercial-bin-cleaning-leeds.html">Commercial Leeds</a></li>
-<li><a href="commercial-bin-cleaning-wakefield.html">Commercial Wakefield</a></li>
-</ul>
-</div>
-</section>
-
-<section class="section dark-section">
-<div class="container">
-<a href="contact.html" class="btn-primary">Request Domestic Quote</a>
-</div>
+            <button type="submit">Submit Enquiry</button>
+        </form>
+        <p id="domesticSuccess" style="color:green; display:none;">Thank you! Your enquiry has been sent.</p>
+    </div>
 </section>
 
 <footer class="footer">
-<div class="container footer-grid">
-<div>
-<h3>West Yorkshire Waste Sanitation Group</h3>
-<p>Professional waste container sanitation contractor serving commercial and residential properties across West Yorkshire.</p>
-</div>
-
-<div>
-<h4>Services</h4>
-<ul>
-<li><a href="commercial-bin-cleaning-bradford.html">Commercial Bradford</a></li>
-<li><a href="commercial-bin-cleaning-leeds.html">Commercial Leeds</a></li>
-<li><a href="commercial-bin-cleaning-wakefield.html">Commercial Wakefield</a></li>
-<li><a href="residential-bin-cleaning-west-yorkshire.html">Residential Services</a></li>
-<li><a href="contact.html">Request Quote</a></li>
-</ul>
-</div>
-
-<div>
-<h4>Contact</h4>
-<p>📞 07840 507481</p>
-<p>✉ info@westyorkshirewastesanitation.co.uk</p>
-<p>Serving West Yorkshire</p>
-</div>
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 West Yorkshire Waste Sanitation Group Ltd. All Rights Reserved.</p>
-</div>
+    <div class="container footer-grid">
+        <p>📞 07840 507481 | ✉ info@westyorkshirewastesanitation.co.uk</p>
+    </div>
 </footer>
 
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "FAQPage",
-"mainEntity": [
-{
-"@type": "Question",
-"name": "How often should my wheelie bin be cleaned?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Most customers choose every 4 weeks, with fortnightly options available."
-}
-},
-{
-"@type": "Question",
-"name": "Do you clean recycling bins?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes, we clean general waste, recycling and garden waste bins."
-}
-},
-{
-"@type": "Question",
-"name": "Do I need to be home?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "No, as long as bins are accessible after collection, service can be completed."
-}
-}
-]
-}
+<script>
+document.getElementById("domesticForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const form = e.target;
+    db.collection("enquiries").add({
+        type: "Residential",
+        fullName: form.fullName.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        postcode: form.postcode.value,
+        plan: form.plan.value,
+        details: form.details.value,
+        timestamp: new Date()
+    }).then(() => {
+        document.getElementById("domesticSuccess").style.display = "block";
+        form.reset();
+    }).catch((err)=>{
+        alert("Error: " + err);
+    });
+});
 </script>
 
 </body>
