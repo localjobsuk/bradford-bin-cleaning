@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Dashboard - West Yorkshire Waste Sanitation</title>
+  <title>Secure Admin Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth-compat.js"></script>
 
   <style>
     body { font-family: Arial; padding:20px; background:#f5f5f5;}
@@ -13,34 +14,44 @@
     th, td { padding:10px; border:1px solid #ddd; }
     th { background:#222; color:white;}
     select, textarea { width:100%; }
-    button { padding:5px 10px; }
+    button { padding:6px 12px; }
+    #loginBox { max-width:400px; margin:auto; }
   </style>
 </head>
 <body>
 
-<h2>Enquiries Dashboard</h2>
+<div id="loginBox">
+  <h2>Admin Login</h2>
+  <input type="email" id="email" placeholder="Email"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
+  <p id="loginError" style="color:red;"></p>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Postcode</th>
-      <th>Type</th>
-      <th>Bins</th>
-      <th>Status</th>
-      <th>Notes</th>
-      <th>Save</th>
-    </tr>
-  </thead>
-  <tbody id="enquiryTable"></tbody>
-</table>
+<div id="dashboard" style="display:none;">
+  <h2>Enquiries Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+  <br><br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Status</th>
+        <th>Notes</th>
+        <th>Save</th>
+      </tr>
+    </thead>
+    <tbody id="enquiryTable"></tbody>
+  </table>
+</div>
 
 <script>
   const firebaseConfig = {
-    apiKey: "AIzaSyADxEq-T2PW4Nk8ERbXjcq6oJzdDHu8F6E",
+    apiKey: "YOUR_API_KEY",
     authDomain: "westyorkshirebincleaning.firebaseapp.com",
     projectId: "westyorkshirebincleaning",
     storageBucket: "westyorkshirebincleaning.appspot.com",
@@ -50,44 +61,67 @@
 
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
+  const auth = firebase.auth();
 
-  const table = document.getElementById("enquiryTable");
+  function login(){
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-  db.collection("enquiries").orderBy("submittedAt", "desc")
-    .onSnapshot(snapshot => {
-      table.innerHTML = "";
-      snapshot.forEach(doc => {
-        const data = doc.data();
-
-        const row = `
-          <tr>
-            <td>${data.submittedAt?.toDate().toLocaleString() || ''}</td>
-            <td>${data.fullName || ''}</td>
-            <td>${data.email || ''}</td>
-            <td>${data.phone || ''}</td>
-            <td>${data.postcode || ''}</td>
-            <td>${data.enquiryType || ''}</td>
-            <td>${data.numBins || ''}</td>
-            <td>
-              <select id="status-${doc.id}">
-                <option ${data.status=="New"?"selected":""}>New</option>
-                <option ${data.status=="Contacted"?"selected":""}>Contacted</option>
-                <option ${data.status=="Quoted"?"selected":""}>Quoted</option>
-                <option ${data.status=="Won"?"selected":""}>Won</option>
-                <option ${data.status=="Lost"?"selected":""}>Lost</option>
-              </select>
-            </td>
-            <td>
-              <textarea id="notes-${doc.id}">${data.notes || ''}</textarea>
-            </td>
-            <td>
-              <button onclick="saveEnquiry('${doc.id}')">Save</button>
-            </td>
-          </tr>
-        `;
-        table.innerHTML += row;
+    auth.signInWithEmailAndPassword(email, password)
+      .catch(error => {
+        document.getElementById("loginError").innerText = error.message;
       });
-    });
+  }
+
+  function logout(){
+    auth.signOut();
+  }
+
+  auth.onAuthStateChanged(user => {
+    if(user){
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("dashboard").style.display = "block";
+      loadEnquiries();
+    } else {
+      document.getElementById("loginBox").style.display = "block";
+      document.getElementById("dashboard").style.display = "none";
+    }
+  });
+
+  function loadEnquiries(){
+    const table = document.getElementById("enquiryTable");
+
+    db.collection("enquiries").orderBy("submittedAt", "desc")
+      .onSnapshot(snapshot => {
+        table.innerHTML = "";
+        snapshot.forEach(doc => {
+          const data = doc.data();
+          table.innerHTML += `
+            <tr>
+              <td>${data.submittedAt?.toDate().toLocaleString() || ''}</td>
+              <td>${data.fullName || ''}</td>
+              <td>${data.email || ''}</td>
+              <td>${data.phone || ''}</td>
+              <td>
+                <select id="status-${doc.id}">
+                  <option ${data.status=="New"?"selected":""}>New</option>
+                  <option ${data.status=="Contacted"?"selected":""}>Contacted</option>
+                  <option ${data.status=="Quoted"?"selected":""}>Quoted</option>
+                  <option ${data.status=="Won"?"selected":""}>Won</option>
+                  <option ${data.status=="Lost"?"selected":""}>Lost</option>
+                </select>
+              </td>
+              <td>
+                <textarea id="notes-${doc.id}">${data.notes || ''}</textarea>
+              </td>
+              <td>
+                <button onclick="saveEnquiry('${doc.id}')">Save</button>
+              </td>
+            </tr>
+          `;
+        });
+      });
+  }
 
   function saveEnquiry(id){
     const status = document.getElementById("status-"+id).value;
