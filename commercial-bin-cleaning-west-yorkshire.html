@@ -2,23 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Commercial Bin Cleaning West Yorkshire</title>
-    <meta name="description" content="Professional commercial bin cleaning services across West Yorkshire for trade and industrial waste containers.">
+    <title>Commercial Bin Cleaning | West Yorkshire Waste Sanitation Group</title>
+    <meta name="description" content="Request a commercial bin cleaning quote across West Yorkshire.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyADxEq-T2PW4Nk8ERbXjcq6oJzdDHu8F6E",
+            authDomain: "westyorkshirebincleaning.firebaseapp.com",
+            projectId: "westyorkshirebincleaning",
+            storageBucket: "westyorkshirebincleaning.appspot.com",
+            messagingSenderId: "236905379736",
+            appId: "1:236905379736:web:d179462e7d3b670be05ded",
+            measurementId: "G-905799P3VY"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
 </head>
 
 <body>
-
 <header class="header">
     <div class="container nav-container">
         <div class="logo">West Yorkshire Waste Sanitation Group</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="commercial-bin-cleaning-west-yorkshire.html">Commercial</a></li>
-            <li><a href="commercial-bin-cleaning-bradford.html">Bradford</a></li>
-            <li><a href="commercial-bin-cleaning-leeds.html">Leeds</a></li>
-            <li><a href="commercial-bin-cleaning-wakefield.html">Wakefield</a></li>
             <li><a href="residential-bin-cleaning-west-yorkshire.html">Domestic</a></li>
             <li><a href="contact.html" class="nav-cta">Request Quote</a></li>
         </ul>
@@ -27,90 +41,82 @@
 
 <section class="hero">
     <div class="container">
-        <h1>Commercial Bin Cleaning West Yorkshire</h1>
-        <p>Structured trade and industrial waste container sanitation services across West Yorkshire.</p>
+        <h1>Commercial Bin Cleaning</h1>
+        <p>Structured commercial bin cleaning contracts across West Yorkshire.</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
-        <h2>Professional Commercial Bin Cleaning Across West Yorkshire</h2>
-        <p>
-            We provide recurring commercial bin cleaning contracts for businesses throughout West Yorkshire.
-            Our structured sanitation service ensures hygiene compliance, odour control and consistent cleaning
-            for trade bins, euro bins and large commercial waste containers.
-        </p>
+        <h2>Request a Quote</h2>
+        <form id="commercialForm">
+            <label>Enquiry Type</label>
+            <input type="text" value="Commercial" readonly>
 
-        <h3>Commercial Containers We Service</h3>
-        <ul>
-            <li>240L trade bins</li>
-            <li>360L trade bins</li>
-            <li>660L commercial bins</li>
-            <li>1100L euro bins</li>
-        </ul>
+            <label>Full Name</label>
+            <input type="text" name="fullName" required>
 
-        <p>
-            Each clean includes high-pressure internal washing, external cleaning,
-            disinfecting treatment and deodorising.
-        </p>
-    </div>
-</section>
+            <label>Company Name</label>
+            <input type="text" name="companyName">
 
-<section class="section dark-section">
-    <div class="container">
-        <h2>Areas We Cover</h2>
-        <ul>
-            <li><a href="commercial-bin-cleaning-bradford.html">Commercial Bin Cleaning Bradford</a></li>
-            <li><a href="commercial-bin-cleaning-leeds.html">Commercial Bin Cleaning Leeds</a></li>
-            <li><a href="commercial-bin-cleaning-wakefield.html">Commercial Bin Cleaning Wakefield</a></li>
-        </ul>
-    </div>
-</section>
+            <label>Email</label>
+            <input type="email" name="email" required>
 
-<section class="section">
-    <div class="container">
-        <h2>Sectors We Support</h2>
-        <ul>
-            <li>Hotels & Hospitality</li>
-            <li>Restaurants & Takeaways</li>
-            <li>Apartment & Property Management</li>
-            <li>Industrial Estates</li>
-            <li>Retail Parks</li>
-            <li>Care Homes</li>
-            <li>Education Facilities</li>
-        </ul>
+            <label>Phone</label>
+            <input type="tel" name="phone" required>
 
-        <a href="contact.html" class="btn-primary">Request Commercial Quote</a>
+            <label>Postcode</label>
+            <input type="text" name="postcode" required>
+
+            <label>Number of Bins</label>
+            <input type="number" name="bins" required>
+
+            <label>Service Frequency</label>
+            <select name="frequency">
+                <option>Weekly</option>
+                <option>Fortnightly</option>
+                <option>4 Weekly</option>
+                <option>Monthly</option>
+            </select>
+
+            <label>Additional Details</label>
+            <textarea name="details" rows="5"></textarea>
+
+            <button type="submit">Submit Enquiry</button>
+        </form>
+        <p id="commercialSuccess" style="color:green; display:none;">Thank you! Your enquiry has been sent.</p>
     </div>
 </section>
 
 <footer class="footer">
     <div class="container footer-grid">
-        <div>
-            <h4>West Yorkshire Waste Sanitation Group</h4>
-            <p>Professional waste container sanitation contractor serving commercial and residential properties across West Yorkshire.</p>
-        </div>
-
-        <div>
-            <h4>Commercial Locations</h4>
-            <ul>
-                <li><a href="commercial-bin-cleaning-bradford.html">Bradford</a></li>
-                <li><a href="commercial-bin-cleaning-leeds.html">Leeds</a></li>
-                <li><a href="commercial-bin-cleaning-wakefield.html">Wakefield</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Contact</h4>
-            <p>📞 07840 507481</p>
-            <p>✉ info@westyorkshirewastesanitation.co.uk</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 West Yorkshire Waste Sanitation Group Ltd. All Rights Reserved.
+        <p>📞 07840 507481 | ✉ info@westyorkshirewastesanitation.co.uk</p>
     </div>
 </footer>
 
+<script>
+document.getElementById("commercialForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const form = e.target;
+    db.collection("enquiries").add({
+        type: "Commercial",
+        fullName: form.fullName.value,
+        companyName: form.companyName.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        postcode: form.postcode.value,
+        bins: form.bins.value,
+        frequency: form.frequency.value,
+        details: form.details.value,
+        timestamp: new Date()
+    }).then(() => {
+        document.getElementById("commercialSuccess").style.display = "block";
+        form.reset();
+    }).catch((err)=>{
+        alert("Error: " + err);
+    });
+});
+</script>
 </body>
 </html>
+
