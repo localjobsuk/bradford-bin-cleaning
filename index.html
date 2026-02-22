@@ -4,114 +4,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>West Yorkshire Bin Cleaning</title>
+<meta name="description" content="Professional residential and commercial bin cleaning across West Yorkshire. Request a quote today.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-body{background:#f4f6f9;color:#333;}
+/* ================= Reset & Base ================= */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', Arial, sans-serif; }
+body { line-height: 1.65; background: #f8f8f8; color:#1F2937; }
+h1,h2,h3,h4,h5 { color:#1E3A8A; font-weight:700; margin-bottom:15px; }
 
-header{
-  background:#1e3a8a;
-  color:#fff;
-  padding:15px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin:0 10px;
-  font-weight:bold;
-}
-nav a:hover{opacity:0.8;}
+/* ================= Header ================= */
+header { background:#1E3A8A; color:#fff; padding:15px 20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:1000; }
+header .logo h2 { margin:0; font-size:1.5rem; }
+nav ul { list-style:none; display:flex; flex-wrap:wrap; }
+nav ul li { margin:0 10px; }
+nav ul li a { color:#fff; text-decoration:none; font-weight:600; transition:0.3s; }
+nav ul li a:hover, nav ul li a.active { text-decoration:underline; }
 
-.hero{
-  background:#2563eb;
-  color:#fff;
-  text-align:center;
-  padding:60px 20px;
-}
+/* ================= Hero ================= */
+.hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:80px 20px; }
+.hero h1 { font-size:2.5rem; margin-bottom:15px; }
+.hero p { font-size:1.2rem; }
 
-section{
-  max-width:900px;
-  margin:40px auto;
-  background:#fff;
-  padding:30px;
-  border-radius:8px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
+/* ================= Sections ================= */
+section { padding:40px 20px; max-width:1100px; margin:20px auto; background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+section h2 { margin-bottom:15px; color:#1E3A8A; }
+section p { margin-bottom:15px; }
 
-form{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
+/* ================= Service Cards ================= */
+.service-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px; }
+.service-card { background:#fff; border-radius:10px; padding:25px; box-shadow:0 4px 12px rgba(0,0,0,0.08); flex:1 1 250px; transition: transform 0.3s, box-shadow 0.3s; }
+.service-card:hover { transform: translateY(-5px); box-shadow:0 6px 20px rgba(0,0,0,0.12); }
 
-input,select,textarea{
-  padding:10px;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
+/* ================= Buttons ================= */
+button, .cta-button { background: linear-gradient(90deg,#1E3A8A,#2563EB); color:#fff; border:none; border-radius:8px; padding:12px 25px; cursor:pointer; font-weight:bold; transition: all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
+button:hover, .cta-button:hover { transform: translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.15); }
 
-button{
-  padding:10px;
-  border:none;
-  background:#1e3a8a;
-  color:#fff;
-  font-weight:bold;
-  border-radius:6px;
-  cursor:pointer;
-}
+/* ================= Forms ================= */
+form { display:flex; flex-direction:column; gap:15px; }
+input, select, textarea { padding:12px; border-radius:8px; border:1px solid #CBD5E1; font-size:1rem; transition:border 0.3s; }
+input:focus, select:focus, textarea:focus { border-color:#2563EB; outline:none; }
+textarea { min-height:100px; resize:vertical; }
 
-button:hover{
-  background:#2563eb;
-}
+/* ================= Success & Error ================= */
+.success-message, .error-message { display:none; padding:12px; border-radius:6px; font-weight:bold; }
+.success-message { background:#d1fae5; color:#065f46; }
+.error-message { background:#fee2e2; color:#991b1b; }
 
-.success-message{
-  display:none;
-  margin-top:15px;
-  padding:10px;
-  background:#d1fae5;
-  color:#065f46;
-  border-radius:6px;
-}
+/* ================= Phone Button ================= */
+.phone-number { display:none; font-weight:bold; margin-left:10px; }
 
-.error-message{
-  display:none;
-  margin-top:15px;
-  padding:10px;
-  background:#fee2e2;
-  color:#991b1b;
-  border-radius:6px;
-}
+/* ================= Footer ================= */
+footer { background:#1E3A8A; color:#fff; padding:20px; text-align:center; }
+footer a { color:#fff; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
 
-.phone-number{
-  display:none;
-  font-weight:bold;
-  margin-left:10px;
+/* ================= Responsive ================= */
+@media(max-width:768px){
+  header nav ul { flex-direction:column; gap:15px; margin-top:10px; }
+  .hero h1 { font-size:2rem; }
+  .service-grid { flex-direction:column; }
 }
-
-footer{
-  background:#1e3a8a;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
+@media(max-width:480px){
+  .hero h1 { font-size:1.5rem; }
+  button, .cta-button { width:100%; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h2>West Yorkshire Bin Cleaning</h2>
+  <div class="logo"><h2>West Yorkshire Bin Cleaning</h2></div>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="#">Bradford</a>
-    <a href="#">Leeds</a>
-    <a href="#">Wakefield</a>
-    <a href="#">Domestic</a>
-    <a href="#">Contact</a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#">Bradford</a></li>
+      <li><a href="#">Leeds</a></li>
+      <li><a href="#">Wakefield</a></li>
+      <li><a href="domestic.html">Domestic</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 </header>
 
@@ -121,10 +94,17 @@ footer{
 </div>
 
 <section>
-<h3>Get a Free Quote</h3>
+<h2>Our Services</h2>
+<div class="service-grid">
+  <div class="service-card"><h3>Commercial Cleaning</h3><p>Structured recurring contracts for businesses across West Yorkshire.</p></div>
+  <div class="service-card"><h3>Residential Cleaning</h3><p>Regular domestic bin cleaning with subscription options for homes.</p></div>
+  <div class="service-card"><h3>Compliance & Safety</h3><p>Fully insured with commercial compliance support for all properties.</p></div>
+</div>
+</section>
 
+<section>
+<h2>Request a Quote</h2>
 <form id="enquiryForm">
-
 <select name="enquiryType" required>
 <option value="">Select Enquiry Type</option>
 <option value="Residential">Residential</option>
@@ -132,12 +112,10 @@ footer{
 </select>
 
 <input type="text" name="fullName" placeholder="Full Name" required>
-<input type="text" name="companyName" placeholder="Company Name">
-
+<input type="text" name="companyName" placeholder="Company Name (Optional)">
 <input type="email" name="email" placeholder="Email" required>
 <input type="text" name="phone" placeholder="Phone Number" required>
 <input type="text" name="postcode" placeholder="Postcode" required>
-
 <input type="number" name="numberOfBins" placeholder="Number of Bins" required>
 
 <select name="serviceFrequency" required>
@@ -149,27 +127,21 @@ footer{
 
 <textarea name="additionalDetails" placeholder="Additional Details"></textarea>
 
+<!-- Placeholder for spam protection -->
+<div id="recaptcha-placeholder"></div>
+
 <button type="submit">Submit Enquiry</button>
-
-<div class="success-message" id="successMsg">
-✅ Enquiry submitted successfully!
-</div>
-
-<div class="error-message" id="errorMsg">
-❌ Error submitting enquiry. Try again.
-</div>
-
+<div class="success-message" id="successMsg">✅ Enquiry submitted successfully!</div>
+<div class="error-message" id="errorMsg">❌ Error submitting enquiry. Try again.</div>
 </form>
 
 <br>
-
 <button onclick="showPhone()">Show Phone Number</button>
 <span class="phone-number" id="phoneNumber">01234 567890</span>
-
 </section>
 
 <footer>
-© 2026 West Yorkshire Bin Cleaning
+<p>© 2026 West Yorkshire Bin Cleaning | Serving Bradford, Leeds, Wakefield & West Yorkshire</p>
 </footer>
 
 <script type="module">
@@ -198,7 +170,6 @@ form.addEventListener("submit", async (e) => {
   errorMsg.style.display = "none";
 
   const formData = new FormData(form);
-
   const data = {
     enquiryType: formData.get("enquiryType"),
     fullName: formData.get("fullName"),
